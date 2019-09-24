@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="WpfApp2.View.IntroducePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2.Controls"
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+      mc:Ignorable="d" 
+      d:DesignHeight="1024" d:DesignWidth="1280" >
+    <Viewbox Stretch="Fill" ScrollViewer.VerticalScrollBarVisibility="Auto" MinHeight="1024"  Loaded="Viewbox_Loaded">
+        <Grid>
+            <TextBox Name="YC" Width="1" Height="1"></TextBox>
+            <Canvas Width="1280" Height="1024" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button  Panel.ZIndex="3" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="15" BorderThickness="0" Height="28" Margin="60,65.5,0,0" Name="btn" Command="{Binding BackCommand}" CommandParameter="{Binding ElementName=datagrid}">
+                    <Button.Content>
+                        <Image  Source="/ControlImages/返回.png" Stretch="Fill" ></Image>
+                    </Button.Content>
+                </Button>
+                <Label 
+                    Panel.ZIndex="3" Foreground="#FFFFFF" BorderThickness="0" Content="返回" FontSize="25" VerticalContentAlignment="Center" Width="54" Height="40" Margin="85,59.5,0,0" Padding="0"  HorizontalContentAlignment="Center" >
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
+                        Command="{Binding BackCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=datagrid}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Label>
+
+                <Image HorizontalAlignment="Left" VerticalAlignment="Top" Width="1280" Height="1024" Source="..\ControlImages\main.png" Stretch="Fill"/>
+                <Border CornerRadius="28" Visibility="Hidden" Height="56" Width="500" Margin="720,45,60,923" BorderThickness="1" Background="White" >
+                    <TextBox  Name="text" Height="56" Text="{Binding TestStr}" MouseEnter="Text_MouseEnter" MouseLeave="Text_MouseLeave"  Width="450" Background="{x:Null}" BorderThickness="0" TextAlignment="Left"  Foreground="Gray" Opacity="0.8"  FontSize="20" VerticalContentAlignment="Center" BorderBrush="#FFB3ABAE" Margin="25,0,22.6,-1.6"/>
+                </Border>
+                <Border CornerRadius="20" Background="White" Height="810" VerticalAlignment="Top" Width="1160" Canvas.Left="60" Canvas.Top="154" >
+                    <Grid Name="datagrid">
+                        
+                    </Grid>
+                </Border>
+                <Label  HorizontalAlignment="Right" FontSize="25" Foreground="Yellow" Content="操作时间: 60s" Width="1220" HorizontalContentAlignment="Right" Padding="0" Margin="0,60,0,0" Name="RemainingTime" />
+                <Button  Visibility="Hidden" Command="{Binding SelectAllCommand}" BorderThickness="0" CommandParameter="{Binding ElementName=datagrid}" HorizontalAlignment="Left"  Height="24"  Margin="1166,61.8,0,0" VerticalAlignment="Top" Width="24">
+                    <Button.Content>
+                        <Image Stretch="Fill" Source="..\ControlImages\搜索.png"/>
+                    </Button.Content>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Setters>
+                                <Setter Property="Background" Value="White"/>
+                            </Style.Setters>
+                            <Style.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Content" Value="1" >
+
+                                    </Setter>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <Image Stretch="Fill" Source="..\ControlImages\搜索.png"/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</UserControl>

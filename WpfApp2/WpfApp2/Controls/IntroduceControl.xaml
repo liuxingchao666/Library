@@ -1,0 +1,95 @@
+﻿
+    <UserControl x:Class="WpfApp2.Controls.IntroduceControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:WpfApp2.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="810" d:DesignWidth="1160">
+    <Viewbox Stretch="Fill" ScrollViewer.VerticalScrollBarVisibility="Auto" MinHeight="810"  >
+        <Grid>
+
+            <Canvas Width="1160" Height="810" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Border CornerRadius="20" Background="White" Height="810" VerticalAlignment="Top" Width="1160">
+                    <Canvas HorizontalAlignment="Left"   Height="810" Margin="0,0,-10,-10.4" VerticalAlignment="Top" Width="1160" RenderTransformOrigin="-1.992,-0.886" >
+                        <Border CornerRadius="20" Background="#FFFFFF" Height="810"  Width="1160" HorizontalAlignment="Left" VerticalAlignment="Top">
+                            <Canvas>
+                                <Image Height="22" Width="6" Source="../ControlImages/矩形 4.png" Margin="30,33,884,758" Stretch="Fill" />
+                                <Label Height="25" Width="220" Padding="0" Content="书籍简介" FontSize="22" Margin="50,30,884,758" Foreground="#2F7DF6"/>
+                                <!--书籍简介布局-->
+                                <Grid Margin="30,82,30,140" Width="1100" Height="600">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="150"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="200"></RowDefinition>
+                                        <RowDefinition Height="27"></RowDefinition>
+                                        <RowDefinition Height="36"></RowDefinition>
+                                        <RowDefinition Height="27"></RowDefinition>
+                                        <RowDefinition Height="310"></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <!--书籍图片-->
+                                    <Image Source="{Binding PIC}" Stretch="Fill" Height="200" VerticalAlignment="Top"></Image>
+                                    <!--书籍属性布局-->
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="40"></RowDefinition>
+                                            <RowDefinition Height="40"></RowDefinition>
+                                            <RowDefinition Height="40"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="31"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="150"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Label Content="{Binding Author}" FontSize="20" Foreground="#5169a7" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" />
+                                        <Label Content="{Binding PressDate}"  FontSize="20" Foreground="#5169a7" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center"/>
+                                        <Label Content="{Binding LayOut}" FontSize="20" Foreground="#5169a7" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"/>
+                                        <Label Content="{Binding ISBN}" FontSize="20" Foreground="#5169a7" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"/>
+                                        <Label Content="{Binding Press}" FontSize="20" Foreground="#5169a7" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center"/>
+                                        <Label Content="{Binding PageNumber}" FontSize="20" Foreground="#5169a7" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center"/>
+                                        <!--<Label Content="{Binding Format}" FontSize="18" Foreground="#666666" Grid.Column="3" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center"/>-->
+
+                                    </Grid>
+                                    <!--书籍名称-->
+                                    <Label Content="{Binding Name}" FontSize="18" Grid.Row="2" Grid.ColumnSpan="2" Foreground="#5169a7"  VerticalAlignment="Center"></Label>
+                                    <!--书籍简介内容-->
+                                    <RichTextBox BorderThickness="0" VerticalAlignment="Top" IsReadOnly="True" Width="1100" Height="310"  Foreground="#5169a7"   FontSize="18" Grid.ColumnSpan="2" Grid.Row="4"  ScrollViewer.CanContentScroll="True" >
+                                        <FlowDocument>
+                                            <Paragraph TextIndent="40">
+                                                <Run Text="{Binding detailedmessage}" Foreground="#5169a7"/>
+                                            </Paragraph>
+                                        </FlowDocument>
+                                    </RichTextBox>
+                                </Grid>
+                            </Canvas>
+                        </Border>
+
+                        <Canvas Width="1160" Height="52"  Margin="0,722,0,0" Visibility="Hidden">
+                            <Label Content="温馨提示：如果需要进入图书馆内借阅书籍，请点击（立即办卡）按钮办理读书卡" Foreground="#2D89F4" FontSize="18" Margin="50,10,456,0"/>
+                            <Border CornerRadius="26" Background="#2D89F4" Width="200" Height="52" Margin="928,0,0,0">
+                                <Label Content="立即办卡" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22" Height="52" Width="158" Background="#2D89F4" BorderThickness="0" Foreground="White" >
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseDown">
+                                            <i:InvokeCommandAction
+                        Command="{Binding ClikCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=datagrid}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </Label>
+                            </Border>
+                        </Canvas>
+                    </Canvas>
+                </Border>
+
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</UserControl>

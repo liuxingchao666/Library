@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="WpfApp2.View.Arcface"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp2.View"
+             mc:Ignorable="d" 
+             xmlns:aforge ="clr-namespace:AForge.Controls;assembly=AForge.Controls"
+  xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+             d:DesignHeight="1024" d:DesignWidth="1280" Loaded="UserControl_Loaded">
+    <Viewbox Stretch="Fill">
+        <Grid>
+            <Label Panel.ZIndex="2" Name="actionName" Foreground="White" FontSize="35" Height="50" HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" >识 别</Label>
+            <Label Name="Time" Foreground="#FFCB2D" Panel.ZIndex="2" HorizontalAlignment="Right" FontSize="25" Margin="50"></Label>
+            <Image  Source="../ControlImages/底图.png" Width="1280" Height="1024" Stretch="Fill"/>
+            <Border CornerRadius="28" Background="White" Width="1100" Height="800">
+                <WrapPanel Background="White" Width="1050" Style="{x:Null}">
+                    <Grid Width="1050" Height="800" Style="{x:Null}" >
+                        <wfi:WindowsFormsHost Width="1050" Height="800" Background="White" >
+                            <wf:Panel x:Name="grid" Dock="Fill"  Width="1050" Height="800" >
+                                </wf:Panel>
+                        </wfi:WindowsFormsHost>
+                    </Grid>
+                </WrapPanel>
+            </Border>
+        </Grid>
+    </Viewbox>
+</UserControl>

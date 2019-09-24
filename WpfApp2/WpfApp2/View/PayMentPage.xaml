@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="WpfApp2.View.PayMentPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.View"
+        mc:Ignorable="d"
+    Height="1024" Width="1280" Background="Transparent" OpacityMask="White"  ScrollViewer.VerticalScrollBarVisibility="Hidden" Loaded="Window_Loaded">
+    <Grid>
+        <Label Name="Time" Foreground="#FFCB2D" Panel.ZIndex="2" HorizontalAlignment="Right" FontSize="25" Margin="50"></Label>
+        <Border CornerRadius="50" Height="700" Width="720" Margin="10" BorderThickness="2"  BorderBrush="White" Opacity="0.8">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="#FF414141" BlurRadius="8"/>
+            </Border.Effect>
+            <Border Background="White"  CornerRadius="50"/>
+        </Border>
+        <Image  Source="../ControlImages/底图.png" Width="1280" Height="1024" Stretch="Fill"/>
+        <Border Height="720" Margin="0,0,0,0" Width="700" >
+            <Grid Name="GRID">
+
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

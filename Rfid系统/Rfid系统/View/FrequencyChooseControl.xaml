@@ -1,0 +1,233 @@
+﻿<Window x:Class="Rfid系统.View.FrequencyChooseControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Rfid系统.View"
+      
+        Title="FrequencyChooseControl"     AllowsTransparency="True" Background="Transparent" OpacityMask="White"   WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ScrollViewer.VerticalScrollBarVisibility="Hidden"
+        WindowStyle="None"
+        Height="1024" Width="1280" WindowState="Maximized" >
+    <Grid>
+        <Border Background="Black" Opacity="0.2"/>
+        <Grid Width="857" Height="496" HorizontalAlignment="Center" VerticalAlignment="Center" Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Grid Width="466" HorizontalAlignment="Center" Height="460">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="6*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Content="刊期号选择" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="楷体" FontSize="18" Foreground="#344561"/>
+                <WrapPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <Label Content="按条码编号或期刊号筛选:" Padding="0" VerticalContentAlignment="Center" FontFamily="楷体" FontSize="16" Foreground="#344561"/>
+                    <TextBox PreviewKeyDown="Query_PreviewKeyDown" Name="query" Height="30" Width="280" BorderBrush="#344561" FontSize="16" Foreground="#2F86F7" VerticalContentAlignment="Center">
+                       
+                    </TextBox>
+                </WrapPanel>
+                <Border Grid.Row="2" BorderBrush="#344561" BorderThickness="1"/>
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.12*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Background="#344561">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.1*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <CheckBox VerticalAlignment="Center" PreviewMouseLeftButtonDown="CheckBox_Checked" Name="selectAll">  </CheckBox>
+                            <Button Style="{StaticResource EmptyButtonStyle}">
+                                <Button.Content>
+                                    <Label Content="全选/" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0"/>
+                                </Button.Content>
+                            </Button>
+                            <Button Style="{StaticResource EmptyButtonStyle}">
+                                <Button.Content>
+                                    <Label Content="反选" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0"/>
+                                </Button.Content>
+                            </Button>
+                        </WrapPanel>
+                        <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="条码编号" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                        <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="期刊号" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                        <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="价格" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                        <Label Grid.Column="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="在架状态" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                    </Grid>
+                    <DataGrid Name="grid" GotFocus="Grid_GotFocus" Grid.Row="1" IsReadOnly="True" FocusVisualStyle="{x:Null}" Focusable="False" ScrollViewer.CanContentScroll="False" GridLinesVisibility="None" ScrollViewer.VerticalScrollBarVisibility="Hidden" BorderThickness="1,0,1,1" AutoGenerateColumns="False" AllowDrop="False" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" HeadersVisibility="None" Background="Transparent">
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Height" Value="30" />
+                                <Setter Property="BorderThickness" Value="0,0,0,1" />
+                                <Setter Property="BorderBrush" Value="#878787"/>
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Width="1.1*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox Margin="5,0,0,0" Click="CheckBox_Checked_1" IsChecked="{Binding IsCheck}"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label FocusVisualStyle="{x:Null}"  Content="{Binding code}" Style="{StaticResource CellContent}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label FocusVisualStyle="{x:Null}"  Content="{Binding anumber}" Style="{StaticResource CellContent}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label FocusVisualStyle="{x:Null}"  Content="{Binding price}" Style="{StaticResource CellContent}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label FocusVisualStyle="{x:Null}"  Content="{Binding lendState}" Style="{StaticResource CellContent}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                <WrapPanel Grid.Row="3" HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="first" Click="First_Click">
+                        <Button.Content>
+                            <Label Content="首页" FontFamily="楷体" FontSize="16"/>
+                        </Button.Content>
+                    </Button>
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="Last" Click="Last_Click">
+                        <Button.Content>
+                            <Label Content="上一页" FontFamily="楷体" FontSize="16"/>
+                        </Button.Content>
+                    </Button>
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="next" Click="Next_Click">
+                        <Button.Content>
+                            <Label Content="下一页" FontFamily="楷体" FontSize="16"/>
+                        </Button.Content>
+                    </Button>
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="LastOne" Click="LastOne_Click">
+                        <Button.Content>
+                            <Label Content="末页" FontFamily="楷体" FontSize="16"/>
+                        </Button.Content>
+                    </Button>
+                    <Label Content="当前页" FontFamily="楷体" FontSize="16"/>
+                    <TextBox Width="70" Height="20" Name="LoadPage"/>
+                    <Label Content="/共" FontFamily="楷体" FontSize="16"/>
+                    <Label Content="" FontFamily="楷体" FontSize="16" Name="CountPage"/>
+                    <Label Content="页" FontFamily="楷体" FontSize="16"/>
+                </WrapPanel>
+                <Border Grid.Row="5" Width="91" Height="29" Background="#344561" HorizontalAlignment="Left">
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="Add" Click="Add_Click">
+                        <Button.Content>
+                            <Label Content="增  加" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0"/>
+                        </Button.Content>
+                    </Button>
+                </Border>
+            </Grid>
+            <Grid Width="301" Height="460" Grid.Column="1" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="8*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button Style="{StaticResource EmptyButtonStyle}" Name="backBtn" Click="BackBtn_Click" HorizontalAlignment="Right" Width="18" Height="14">
+                    <Button.Content>
+                        <Image Source="../images/叉.png" />
+                    </Button.Content>
+                </Button>
+                <Border Grid.Row="1" BorderBrush="#344561" BorderThickness="1"/>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.12*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid Background="#344561">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="条码编号" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                        <Label Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="期刊号" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                        <Label Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="价格" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                        <Label Grid.Column="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Content="操作" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0" />
+                    </Grid>
+                    <DataGrid Name="Bind" Grid.Row="1" GotFocus="Bind_GotFocus" IsReadOnly="True" FocusVisualStyle="{x:Null}" Focusable="False" ScrollViewer.CanContentScroll="True" GridLinesVisibility="None" ScrollViewer.VerticalScrollBarVisibility="Auto" BorderThickness="1,0,1,1" AutoGenerateColumns="False" AllowDrop="False" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" HeadersVisibility="None" Background="Transparent">
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Height" Value="30" />
+                                <Setter Property="BorderThickness" Value="0,0,0,1" />
+                                <Setter Property="BorderBrush" Value="#878787"/>
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label  Content="{Binding code}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label  Content="{Binding anumber}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label  Content="{Binding price}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="*" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Click="Button_Click" Style="{StaticResource EmptyButtonStyle}">
+                                            <Button.Content>
+                                                <Label Content="解绑" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" Foreground="#344561"/>
+                                            </Button.Content>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                <Border Grid.Row="5" Width="91" Height="29" Background="#344561" HorizontalAlignment="Right">
+                    <Button Name="OK" Click="OK_Click" Style="{StaticResource EmptyButtonStyle}">
+                        <Button.Content>
+                            <Label Content="确  认" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="楷体" FontSize="16" Padding="0"/>
+                        </Button.Content>
+                    </Button>
+                </Border>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

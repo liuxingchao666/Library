@@ -1,0 +1,6 @@
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\bin\Debug\ArcFace.dll
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\bin\Debug\ArcFace.pdb
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\Debug\AsfFace.csprojAssemblyReference.cache
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\Debug\AsfFace.csproj.CoreCompileInputs.cache
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\Debug\ArcFace.dll
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\Debug\ArcFace.pdb

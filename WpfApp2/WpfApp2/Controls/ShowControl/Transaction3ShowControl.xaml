@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WpfApp2.Controls.ShowControl.Transaction3ShowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp2.Controls.ShowControl"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="700" Loaded="UserControl_Loaded" Name="PayMentPage">
+    <Border CornerRadius="50" Background="White">
+        <Grid Width="700" Height="720">
+            <Canvas>
+                <Border CornerRadius="50,50,0,0" Background="#2D89F4" Width="700" Height="100">
+                    <Label FontSize="34" Foreground="White" Margin="316,33,316,25" Padding="0">补办</Label>
+                </Border>
+            </Canvas>
+
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,376">
+                <Label Content="支付手续费:" FontSize="28" Foreground="#666666" VerticalContentAlignment="Center"/>
+                <Label Content="￥" FontSize="50" Foreground="#FF764D"/>
+                <Label Content="10" FontSize="50" Foreground="#FF764D" Name="Cost" />
+            </WrapPanel>
+            <Canvas Height="220" Width="700" Margin="0,0,0,10">
+                <Image Source="..\..\ControlImages\图标ZFB.png" Stretch="Fill" Width="220" Canvas.Left="240"/>
+            </Canvas>
+            <Canvas Height="256" Width="700" Margin="0,464,0,0">
+                <Label Content="请将现金放入现金窗口" FontSize="24" Canvas.Left="231" Canvas.Top="54" Foreground="#666666"/>
+                <Border BorderBrush="#FF764D" BorderThickness="1" Width="200" Height="55" CornerRadius="28" Background="#FF764D" Canvas.Left="250" Canvas.Top="119">
+                    <Button TabIndex="2" Width="200" Height="55" Click="Button_Click" Command="{Binding CloseCommand}" Style="{StaticResource EmptyButtonStyle}" CommandParameter="{Binding ElementName=PayMentPage}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FFFFFF" FontSize="28" BorderThickness="0" Background="#CECECE" VerticalAlignment="Top" >
+                        <Button.Content>
+                            <Label Width="200" Height="55" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="取消" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="0"></Label>
+                        </Button.Content>
+                    </Button>
+                </Border>
+                <Label Visibility="Hidden" FontSize="16" Content="30" Canvas.Top="206" Name="times" Canvas.Left="285" Foreground="#CBCBCB"/>
+                <Label Visibility="Hidden" Content="秒后将返回主页" Canvas.Left="310" Canvas.Top="206" FontSize="16" Foreground="#CBCBCB"/>
+            </Canvas>
+        </Grid>
+    </Border>
+</UserControl>

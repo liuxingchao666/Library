@@ -1,0 +1,201 @@
+﻿<Window x:Class="Rfid系统.View.PNChooseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Rfid系统.View"
+             mc:Ignorable="d" 
+              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+           AllowsTransparency="True" Background="Transparent" OpacityMask="White"   WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ScrollViewer.VerticalScrollBarVisibility="Hidden"
+        WindowStyle="None"
+        Height="1024" Width="1280" WindowState="Maximized">
+    <Grid>
+        <Border Background="Black" Opacity="0.2"/>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Background="White" Width="1052" Height="566">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="26" />
+                <ColumnDefinition Width="353" />
+                <ColumnDefinition Width="18" />
+                <ColumnDefinition Width="629" />
+                <ColumnDefinition Width="26" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="72" />
+                <RowDefinition Height="471" />
+                <RowDefinition Height="23" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="1" Content="刊期号选择" FontSize="26" Foreground="#344561" VerticalContentAlignment="Center" FontFamily="楷体"/>
+            <Button Width="25" Height="19" Grid.Column="3" HorizontalAlignment="Right" Style="{StaticResource EmptyButtonStyle}" Command="{Binding CloseCommond}">
+                <Button.Content>
+                    <Image Source="../images/叉.png" />
+                </Button.Content>
+            </Button>
+            <Border Grid.Column="1" Grid.Row="1" BorderThickness="1" BorderBrush="#344561" />
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.6*" />
+                    <RowDefinition Height="0.6*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="*" FontSize="16" Foreground="Red" VerticalContentAlignment="Center"/>
+                    <Label Content="刊 期 号:" FontSize="16" FontFamily="楷体" VerticalContentAlignment="Center" Foreground="#344561" />
+                    <Border Width="231" Height="35" BorderBrush="#344561" BorderThickness="1" CornerRadius="4" >
+                        <TextBox Width="223" Name="anumber" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontFamily="楷体" Foreground="#2F86F7" Text="{Binding aNumber}"/>
+                    </Border>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="*" FontSize="16" Foreground="Red" VerticalContentAlignment="Center"/>
+                    <Label Content="总 期 号:" FontSize="16" FontFamily="楷体" VerticalContentAlignment="Center" Foreground="#344561" />
+                    <Border Width="231" Height="35" BorderBrush="#344561" BorderThickness="1" CornerRadius="4" >
+                        <TextBox Width="223" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontFamily="楷体" Foreground="#2F86F7" Text="{Binding sNumber}"/>
+                    </Border>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="*" FontSize="16" Foreground="Red" VerticalContentAlignment="Center"/>
+                    <Label Content="定    价:" FontSize="16" FontFamily="楷体" VerticalContentAlignment="Center" Foreground="#344561" />
+                    <Border Width="231" Height="35" BorderBrush="#344561" BorderThickness="1" CornerRadius="4" >
+                        <TextBox InputMethod.IsInputMethodSuspended="True" PreviewTextInput="TextBox_PreviewTextInput" Width="223" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontFamily="楷体" Foreground="#2F86F7" Text="{Binding price}"/>
+                    </Border>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="*" FontSize="16" Foreground="Red" VerticalContentAlignment="Center"/>
+                    <Label Content="页    数:" FontSize="16" FontFamily="楷体" VerticalContentAlignment="Center" Foreground="#344561" />
+                    <Border Width="231" Height="35" BorderBrush="#344561" BorderThickness="1" CornerRadius="4" >
+                        <TextBox InputMethod.IsInputMethodSuspended="True" PreviewTextInput="TextBox_PreviewTextInput" Width="223" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontFamily="楷体" Foreground="#2F86F7" Text="{Binding page}"/>
+                    </Border>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Label Content="*" FontSize="16" Foreground="Red" VerticalContentAlignment="Center"/>
+                    <Label Content="出版日期:" FontSize="16" FontFamily="楷体" VerticalContentAlignment="Center" Foreground="#344561" />
+                    <Border Width="231" Height="35" BorderBrush="#344561" BorderThickness="1" CornerRadius="4" >
+                        <DatePicker Width="223" BorderThickness="0" FontSize="16" VerticalContentAlignment="Center" FontFamily="楷体" Foreground="#2F86F7" Text="{Binding publicationDateStr}">
+                            <DatePicker.Resources>
+                                <Style TargetType="DatePickerTextBox">
+                                    <Setter Property="IsReadOnly" Value="True"/>
+                                    <Setter Property="Text" Value="{Binding publicationDateStr}" />
+                                </Style>
+                            </DatePicker.Resources>
+                        </DatePicker>
+                    </Border>
+                </WrapPanel>
+                <WrapPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top">
+                    <Label Content="*" FontSize="16" Foreground="Red" VerticalContentAlignment="Top"/>
+                    <Label Content="备    注:" FontSize="16" FontFamily="楷体" VerticalContentAlignment="Top" Foreground="#344561" />
+                    <Border Width="231" Height="80" BorderBrush="#344561" BorderThickness="1" CornerRadius="4" >
+                        <TextBox Width="223" TextWrapping="Wrap" FontSize="16" BorderThickness="0" FontFamily="楷体" Foreground="#2F86F7" Text="{Binding remark}"/>
+                    </Border>
+                </WrapPanel>
+                <Button Grid.Row="6" Style="{StaticResource EmptyButtonStyle}" Command="{Binding CopyCommond}">
+                    <Button.Content>
+                        <Label Content="复制上一次录入信息" FontSize="16" Foreground="#2F86F7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="楷体" />
+                    </Button.Content>
+                </Button>
+                <Border Width="81" Height="31" CornerRadius="8" Grid.Row="7" Margin="0,0,20,0" HorizontalAlignment="Right" Background="#344561">
+                    <Button Style="{StaticResource EmptyButtonStyle}" Command="{Binding AddCommond}" CommandParameter="{Binding ElementName=grid}">
+                        <Button.Content>
+                            <Label Content="确认" FontSize="16" FontFamily="楷体" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        </Button.Content>
+                    </Button>
+                </Border>
+            </Grid>
+            <Grid Grid.Column="3" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="360" />
+                    <RowDefinition Height="71" />
+                </Grid.RowDefinitions>
+                <Grid Background="#344561">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="1.5*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="刊期号" Foreground="White" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontFamily="楷体"/>
+                    <Label Content="总期号" Foreground="White" Grid.Column="1" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontFamily="楷体"/>
+                    <Label Content="出版日期" Foreground="White" Grid.Column="2" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontFamily="楷体"/>
+                    <Label Content="操作" Foreground="White" Grid.Column="3" FontSize="18" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="0" FontFamily="楷体"/>
+                </Grid>
+                <WrapPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="3">
+                    <Border Width="124" CornerRadius="10" Background="#344561" Height="48">
+                        <Button Style="{StaticResource EmptyButtonStyle}" CommandParameter="{Binding ElementName=grid}" Command="{Binding OKCommond}">
+                            <Button.Content>
+                                <Label Content="确认" Foreground="White" FontFamily="楷体" FontSize="18" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            </Button.Content>
+                        </Button>
+                    </Border>
+                    <Label Width="50" />
+                    <Border Width="124" CornerRadius="10" Background="#ABABAB" Height="48">
+                        <Button Style="{StaticResource EmptyButtonStyle}" Command="{Binding CloseCommond}">
+                            <Button.Content>
+                                <Label Content="取消" Foreground="White" FontFamily="楷体" FontSize="18" Padding="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                            </Button.Content>
+                        </Button>
+                    </Border>
+                </WrapPanel>
+                <DataGrid  GotFocus="Grid_GotFocus" Name="grid" Grid.Row="1" IsReadOnly="True" FocusVisualStyle="{x:Null}" Focusable="False" ScrollViewer.CanContentScroll="True" GridLinesVisibility="None" ScrollViewer.VerticalScrollBarVisibility="Auto" BorderThickness="1,0,1,1" AutoGenerateColumns="False" AllowDrop="False" CanUserAddRows="False" CanUserSortColumns="True" CanUserResizeColumns="False" HeadersVisibility="None" Background="Transparent" ItemsSource="{Binding List}">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="SelectionChanged">
+                            <i:InvokeCommandAction
+                        Command="{Binding Click, Mode=OneWay}" CommandParameter="{Binding ElementName=grid}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <DataGrid.RowStyle>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="Height" Value="40" />
+                            <Setter Property="BorderThickness" Value="0,0,0,1" />
+                            <Setter Property="BorderBrush" Value="#878787"/>
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                        </Style>
+                    </DataGrid.RowStyle>
+                    <DataGrid.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                        </Style>
+                    </DataGrid.CellStyle>
+                    <DataGrid.Columns>
+                        <DataGridTemplateColumn Width="*" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label FocusVisualStyle="{x:Null}"  Content="{Binding aNumber}" Style="{StaticResource CellContent}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Width="1.5*" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label FocusVisualStyle="{x:Null}"  Content="{Binding sNumber}" Style="{StaticResource CellContent}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Width="1.5*" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Label FocusVisualStyle="{x:Null}"   Content="{Binding publicationDateStr}" Style="{StaticResource CellContent}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Width="*" >
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Style="{StaticResource EmptyButtonStyle}" Click="Button_Click" Command="{Binding DeleteCommond}" CommandParameter="{Binding ElementName=grid}">
+                                        <Button.Content>
+                                            <Label FocusVisualStyle="{x:Null}"  Content="删除" Foreground="Red" FontFamily="楷体" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                                        </Button.Content>
+                                    </Button>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

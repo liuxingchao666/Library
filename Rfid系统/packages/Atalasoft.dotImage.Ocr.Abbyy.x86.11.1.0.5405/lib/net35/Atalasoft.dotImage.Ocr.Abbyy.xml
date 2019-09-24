@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Atalasoft.dotImage.Ocr.Abbyy</name>
+    </assembly>
+    <members>
+        <member name="T:Atalasoft.Ocr.Abbyy.PredefinedProfile">
+            <summary>
+            Describes predefined profiles available for Abbyy OCR Engine.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.Default">
+            <summary>
+            Sets all the processing parameters to the default values.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.DocumentConversion_Accuracy">
+            <summary>
+            Suitable for converting documents into an editable format (e.g. RTF, DOCX).
+            <para>
+            The settings have been optimized for accuracy:
+            Best quality. Enables font style detection and full synthesis of the logical structure of a document. 
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.DocumentConversion_Speed">
+            <summary>
+            Suitable for converting documents into an editable format (e.g. RTF, DOCX).
+            <para>
+            The settings have been optimized for processing speed:
+            Best quality. Enables font style detection and full synthesis of the logical structure of a document. 
+            The processes of document analysis and recognition are speeded up. 
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.DocumentArchiving_Accuracy">
+            <summary>
+            Suitable for creating an electronic archive (converting to PDF, PDF/A, PDF and PDF/A with MRC).
+            <para>
+            The settings have been optimized for accuracy:
+            Enables detection of maximum text on an image, including text embedded into the image. 
+            Skew correction is not performed. 
+            Fonts and styles are not detected. 
+            Full synthesis of the logical structure of a document is not performed. 
+            <note type="important">
+            The profile is not intended for converting a document into RTF, DOCX, PDF text only. Use the document conversion profiles for such purpose.
+            </note>
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.DocumentArchiving_Speed">
+            <summary>
+            Suitable for creating an electronic archive (converting to PDF, PDF/A, PDF and PDF/A with MRC).
+            <para>
+            The settings have been optimized for processing speed:
+            Enables detection of maximum text on an image, including text embedded into the image. 
+            Skew correction is not performed. 
+            Fonts and styles are not detected. 
+            Full synthesis of the logical structure of a document is not performed. 
+            The processes of document analysis and recognition are speeded up.
+            <note type="important">
+            The profile is not intended for converting a document into RTF, DOCX, PDF text only. Use the document conversion profiles for such purpose.
+            </note>
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.BookArchiving_Accuracy">
+            <summary>
+            Suitable for creating an electronic library (converting to PDF, PDF/A, PDF and PDF/A with MRC).
+            <para>
+            The settings have been optimized for accuracy:
+            Best quality. Enables font style detection and full synthesis of the logical structure of a document.
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.BookArchiving_Speed">
+            <summary>
+            Suitable for creating an electronic library (converting to PDF, PDF/A, PDF and PDF/A with MRC).
+            <para>
+            The settings have been optimized for processing speed:
+            Best quality. Enables font style detection and full synthesis of the logical structure of a document. 
+            The processes of document analysis and recognition are speeded up. 
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.TextExtraction_Accuracy">
+            <summary>
+            Suitable for extracting text from a document. 
+            <para>
+            The settings have been optimized for accuracy:
+            Enables detection of all text on an image, including small text areas of low quality (pictures and tables are not detected). 
+            Fonts and styles are not detected. 
+            Full synthesis of the logical structure of a document is not performed.
+            <note type="important">
+            The profile is not intended for converting a document into RTF, DOCX, PDF text only. Use the document conversion profiles for such purpose.
+            </note>
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.TextExtraction_Speed">
+            <summary>
+            Suitable for extracting text from a document. 
+            <para>
+            The settings have been optimized for processing speed:
+            Enables detection of all text on an image, including small text areas of low quality (pictures and tables are not detected). 
+            Fonts and styles are not detected. 
+            Full synthesis of the logical structure of a document is not performed. 
+            The processes of document analysis and recognition are speeded up. 
+            <note type="important">
+            The profile is not intended for converting a document into RTF, DOCX, PDF text only. Use the document conversion profiles for such purpose.
+            </note>
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.FieldLevelRecognition">
+            <summary>
+            Suitable for recognizing short text fragments. Currently this profile has default settings. 
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.HighCompressedImageOnlyPdf">
+            <summary>
+            Suitable for creating high-compressed PDF files which contain entire documents saved as pictures. 
+            <para>
+            The following settings are used:
+            Document recognition and synthesis of the logical structure of a document are not performed. 
+            Skew correction is not performed. 
+            PDF export is optimized for the minimum size of the resulting file. 
+            The entire document is saved as a picture (PEM_ImageOnly mode).
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.EngineeringDrawingsProcessing">
+            <summary>
+            Suitable for recognizing technical drawings. It takes into account large size and complexity of engineering diagrams, as well as possibility of different text orientation within the image. The profile is intended for converting such images into searchable PDF format.
+            <para>
+            The following settings are used:
+            Enables detection of all text on an image, including text blocks of vertical orientation. 
+            Full synthesis of the logical structure of a document is not performed. 
+            </para>
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.PredefinedProfile.Version9Compatibility">
+            <summary>
+            Provided for compatibility, sets the processing parameters to the default values of ABBYY FineReader Engine 9.0. 
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Ocr.Abbyy.AbbyyEngine">
+            <summary> 
+            The Abbyy OCR engine object is used for recognizing either machine printed or hand printed text within a scanned image using Abbyy FineReader OCR Engine. 
+            </summary>
+            <para>
+            </para>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.#ctor">
+            <summary> Constructs a new AbbyyEngine object</summary>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.#ctor(Atalasoft.Ocr.IOcrFactory)">
+            <summary> Constructs a new AbbyyEngine object</summary>
+            <param name="factory"> A factory used for constructing page elements.  The BasicOcrFactory class can be used for
+            this. </param>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyEngine.BoundAbbyyRegions">
+            <summary>
+            This property how the PageLocation event will translate detected internal Abbyy regions into <see cref="T:Atalasoft.Ocr.OcrRegion"/>
+            objects. A value of true will tends towards outputting larger <see cref="T:Atalasoft.Ocr.OcrRegion"/> objects with boundaries that correspond 
+            to the bounded rectangles of multiple related internal Abbyy regions. A value of false will always try to represent one internal
+            Abbyy region with one individual <see cref="T:Atalasoft.Ocr.OcrRegion"/> object.
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyEngine.ParallelProcessing">
+            <summary>
+            Gets or sets a value indicating whether parallel processing is enabled.
+            </summary>
+            <remarks>
+            Parallel processing affects Recognize and Translate overloads that accept
+            collection of images (through parameter).
+            Please take into account that parallel processing requires more RAM than
+            sequential processing. The general recommendation for a workstation is
+            350 MB * (cores number) + 450MB RAM, and if you are processing documents
+            in Arabic or CJK languages — 850 MB * (cores number) + 750MB RAM.
+            Parallel processing is disabled by default.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyEngine.RetainLayout">
+            <summary>
+            Specifies if original lines in recognized text should be retained in the result. This property is false by default.
+            </summary>
+            <remarks>
+            Layout retaining is applied to the following output file types: rtf, docx, odt, txt, html, pptx.
+            </remarks>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyEngine.DefaultRecognitionCulture">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.Initialize">
+            <summary> Initialize the engine. </summary>
+            <remarks> The AbbyyLoader object much be constructed before the AbbyyEngine object is initialized.  This is
+            best done in a static constructor for a class.  The AbbyyLoader object is passed in a path to the resources needed 
+            by the Abbyy engine and makes them available to the engine. </remarks>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.ShutDown">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.Recognize(Atalasoft.Imaging.AtalaImage)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.Recognize(Atalasoft.Imaging.AtalaImage,System.Collections.Generic.List{Atalasoft.Ocr.AbbyyTextRegion})">
+            <summary> <para>Recognize only within a specific regions in an AtalaImage.</para> </summary>
+            <returns> A new <see cref="T:Atalasoft.Ocr.OcrPage"/> with <see cref="T:Atalasoft.Ocr.OcrRegion"/> objects for representing the 
+            contents of the recognized page and their co-ordinates</returns>
+            <param name="image"> The image to recognize. </param>
+            <param name="abbyyTextRegionList"> A list of <see cref="T:Atalasoft.Ocr.AbbyyTextRegion"/> in the image to focus on, 
+            each of which can be set with optional parameters for recognition</param>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.GetAvailablePreprocessingOptions">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.GetDefaultPreprocessingOptions">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.GetSupportedRecognitionCultures">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.GetSupportedIcrRecognitionCultures">
+            <summary> Returns an array of supported ICR recognition languages for this engine </summary>
+            <returns> An array of supported ICR recognition languages for this engine </returns>
+            <remarks> Some engines provide languages for which there is no equivalent CultureInfo (Esperanto, for example) and 
+            therefore can't be reflected in this interface. </remarks>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.CulturesMatch(System.Globalization.CultureInfo,System.Globalization.CultureInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.RecognitionCultureChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.GetSupportedBarcodeSymbologies">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyEngine.PredefinedProfile">
+            <summary>
+            Gets or sets a predefined profile to be used during recognition.
+            </summary>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.Dispose(System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyEngine.IsMultiCultureRecognitionSupported">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atalasoft.Ocr.Abbyy.ThreeStateValue">
+            <summary>
+            This enumeration denotes 3 different states that are to be used to set values for certain properties.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.ThreeStateValue.True">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.ThreeStateValue.False">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.Abbyy.ThreeStateValue.Auto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.Baseline">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.Bounds">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.Char">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.Color">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.Confidence">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.Glyph">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.IsSingleton">
+            <inheritdoc/>
+        </member>
+        <member name="P:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.Text">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.GetFont(Atalasoft.Imaging.Dpi,Atalasoft.Ocr.IFontMapper,Atalasoft.Ocr.IFontBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.GetFontFamily(Atalasoft.Ocr.IFontMapper)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.GetFontName(Atalasoft.Ocr.IFontMapper)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.GetFontSize(Atalasoft.Imaging.Dpi)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Atalasoft.Ocr.Abbyy.AbbyyGlyphAccessor.GetFontStyle(Atalasoft.Ocr.IFontMapper)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atalasoft.Ocr.Abbyy.AbbyyLineAccessor">
+            <inheritdoc/>
+        </member>
+        <member name="T:Atalasoft.Ocr.AbbyyTextRegion">
+            <summary>
+            An abstract class to provide a common ancestor for ABBYY OCR engine related text region subclasses
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Ocr.AbbyyOcrTextRegion">
+            <summary> <c>AbbyyOcrTextRegion</c> represents an area of printed text on a page,
+            specific to the ABBYY OCR engine. </summary>
+        </member>
+        <member name="M:Atalasoft.Ocr.AbbyyOcrTextRegion.#ctor(System.Drawing.Rectangle)">
+            <summary> Initializes a new instance of the <see cref="T:Atalasoft.Ocr.AbbyyOcrTextRegion" /> class. </summary>
+            <param name="bounds"> The bounding <see cref="T:System.Drawing.Rectangle"/> of the page element in pixels relative to the source image. </param>
+        </member>
+        <member name="M:Atalasoft.Ocr.AbbyyOcrTextRegion.#ctor(Atalasoft.Utils.Geometry.PolygonF)">
+            <summary> Initializes a new instance of the <see cref="T:Atalasoft.Ocr.AbbyyOcrTextRegion" /> class. </summary>
+            <param name="bounds"> The bounding <see cref="T:Atalasoft.Utils.Geometry.PolygonF"/> of the page element in pixels relative to the source image. </param>
+        </member>
+        <member name="M:Atalasoft.Ocr.AbbyyOcrTextRegion.#ctor(System.Drawing.Rectangle,Atalasoft.Ocr.OcrTextRotation)">
+            <summary> Initializes a new instance of the <see cref="T:Atalasoft.Ocr.AbbyyOcrTextRegion" /> class. </summary>
+            <param name="bounds"> The bounding <see cref="T:System.Drawing.Rectangle"/> of the page element in pixels relative to the source image. </param>
+            <param name="rotation"> The rotation of the text region with respect to the entire page. </param>
+        </member>
+        <member name="T:Atalasoft.Ocr.AbbyyIcrTextRegion">
+            <summary> <c>AbbyyIcrTextRegion</c> represents an area of hand-printed text on a page with 
+            optional parameters specific to the ABBYY OCR engine. </summary>
+        </member>
+        <member name="M:Atalasoft.Ocr.AbbyyIcrTextRegion.#ctor(System.Drawing.Rectangle)">
+            <summary> Initializes a new instance of the <see cref="T:Atalasoft.Ocr.AbbyyIcrTextRegion" /> class. </summary>
+            <param name="bounds"> The bounding <see cref="T:System.Drawing.Rectangle"/> of the page element in pixels relative to the source image. </param>
+        </member>
+        <member name="M:Atalasoft.Ocr.AbbyyIcrTextRegion.#ctor(Atalasoft.Utils.Geometry.PolygonF)">
+            <summary> Initializes a new instance of the <see cref="T:Atalasoft.Ocr.AbbyyIcrTextRegion" /> class. </summary>
+            <param name="bounds"> The bounding <see cref="T:Atalasoft.Utils.Geometry.PolygonF"/> of the page element in pixels relative to the source image. </param>
+        </member>
+        <member name="M:Atalasoft.Ocr.AbbyyIcrTextRegion.#ctor(System.Drawing.Rectangle,Atalasoft.Ocr.OcrTextRotation)">
+            <summary> Initializes a new instance of the <see cref="T:Atalasoft.Ocr.AbbyyIcrTextRegion" /> class. </summary>
+            <param name="bounds"> The bounding <see cref="T:System.Drawing.Rectangle"/> of the page element in pixels relative to the source image. </param>
+            <param name="rotation"> The rotation of the text region with respect to the entire page. </param>
+        </member>
+        <member name="P:Atalasoft.Ocr.AbbyyIcrTextRegion.TextBorder">
+            <summary>
+            The type of border that the text denoted by this region is enclosed in or delimited by.
+            Default is <c>SimpleText</c> (no border)
+            </summary>
+        </member>
+        <member name="P:Atalasoft.Ocr.AbbyyIcrTextRegion.CellCount">
+            <summary>
+            The amount of cells present in the region as a result of borders within the AbbyyIcrTextRegion 
+            delimiting individual characters. Default is 1 (all text is within one 'cell'/subdivision)
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Ocr.AbbyyTextBorder">
+            <summary>This enumeration defines different styles of border markings that can surround text in documents </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.CharBoxSeries">
+            <summary>
+            This value specifies that the field where the text is located is a set of separate boxes.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.CombInFrame">
+            <summary>
+            This value specifies that the field where the text is located is a comb and that this comb is also the bottom line of a frame.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.GrayBoxes">
+            <summary>
+            This value specifies that the text is located within white fields on a gray background.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.PartitionedFrame">
+            <summary>
+            This value specifies that the field where the text is located is a frame and that this frame is split by vertical lines.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.SimpleComb">
+            <summary>
+            This value specifies that the field where the text is located is a comb.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.SimpleText">
+            <summary>
+            This value denotes plain text.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.TextInFrame">
+            <summary>
+            This value specifies that the text is enclosed within a frame.
+            </summary>
+        </member>
+        <member name="F:Atalasoft.Ocr.AbbyyTextBorder.UnderlinedText">
+            <summary>
+            This value specifies that the text is underlined.
+            </summary>
+        </member>
+        <member name="T:Atalasoft.Ocr.AtalaFileWriter">
+            <summary>
+            Represents a simple thin wrapper for <see cref="T:System.IO.Stream"/> to basically support ABBYY interface <see cref="T:FREngine.IFileWriter"/>.
+            </summary>
+        </member>
+    </members>
+</doc>

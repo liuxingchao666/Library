@@ -1,0 +1,20 @@
+﻿WpfApp2
+
+
+winexe
+C#
+.cs
+D:\菱牛科技\创口通讯\WpfApp2\WpfApp2\obj\x86\Debug\
+WpfApp2
+none
+false
+DEBUG;TRACE
+D:\菱牛科技\创口通讯\WpfApp2\WpfApp2\App.xaml
+44882695252
+21465505426
+102-383632112
+45-1243735831
+Controls\IntroduceControl.xaml;Controls\MainControl.xaml;Controls\PrintShow.xaml;Controls\QueryControl.xaml;Controls\RenewListControl.xaml;Controls\SelectClassListControl1.xaml;Controls\SelectListControl.xaml;Controls\ShowControl\errorPage.xaml;Controls\ShowControl\HandleidentitionMessagexaml.xaml;Controls\ShowControl\HandleidentitionShowControl1.xaml;Controls\ShowControl\handleShowControl.xaml;Controls\ShowControl\LoadIng.xaml;Controls\ShowControl\PatchCardShowControl.xaml;Controls\ShowControl\Renew2ShowControl.xaml;Controls\ShowControl\Renew3ShowControl.xaml;Controls\ShowControl\RenewFalse.xaml;Controls\ShowControl\RenewPayMent2ShowControl .xaml;Controls\ShowControl\RenewPayMentShowControl .xaml;Controls\ShowControl\RenewShowControl.xaml;Controls\ShowControl\ReportLossIdentition2ShowControl.xaml;Controls\ShowControl\ReportLossIdentitionShowControl.xaml;Controls\ShowControl\ReportLossSuccessShowControl.xaml;Controls\ShowControl\Transaction2ShowControl.xaml;Controls\ShowControl\Transaction3ShowControl.xaml;Controls\ShowControl\TransactionShowControl.xaml;Controls\ShowControl\TransactionSucess2ShowControl.xaml;Controls\ShowControl\TransactionSucessShowControl.xaml;View\Arcface.xaml;View\HandleidentitionPage.xaml;View\IntroducePage.xaml;View\IsReportPage.xaml;View\MainPage.xaml;View\PayMentPage.xaml;View\PrintTest.xaml;View\QueryPage.xaml;View\Renew2Page.xaml;View\Renew3Page.xaml;View\RenewPage.xaml;View\ReportLossIdentitionPage.xaml;View\ReportLossSuccessPage.xaml;View\Setting.xaml;View\Sleeping.xaml;View\TestView.xaml;View\TransactionSucessPage.xaml;
+
+False
+

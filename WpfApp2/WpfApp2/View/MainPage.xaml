@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApp2.View.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="1024" d:DesignWidth="1280"
+      Title="MainPage" WindowStyle="None" WindowState="Maximized" Loaded="Window_Loaded" Closed="Window_Closed"> 
+    <Viewbox Stretch="Fill">
+    <Grid Width="1280" Height="1024" Name="Grid">
+        
+    </Grid>
+    </Viewbox>
+</Window>

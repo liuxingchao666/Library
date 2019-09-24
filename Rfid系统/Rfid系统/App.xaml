@@ -1,0 +1,229 @@
+﻿<Application x:Class="Rfid系统.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Rfid系统"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="ClickButon" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="BorderThickness" Value="1.5" />
+                    <Setter Property="BorderBrush" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="Lable" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="Foreground" Value="#4C6187" />
+                <Setter Property="FontSize" Value="35" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+            </Style.Setters>
+        </Style>
+        <Style x:Key="TextBox" TargetType="TextBox" >
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="FontSize" Value="35"></Setter>
+                <Setter Property="Foreground" Value="#ACBBD4" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="#344561" />
+                <Setter Property="Width" Value="400" />
+                <Setter Property="Height" Value="50" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                <Setter Property="Template" >
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border CornerRadius="30" Width="400" Height="50" BorderBrush="#ACBBD4" BorderThickness="1">
+                                <TextBox BorderThickness="0" InputMethod.IsInputMethodEnabled="False" FontSize="35" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#ACBBD4" Margin="20,0,0,0" Width="320" Height="50" Text="{Binding LoginAccount}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="EmptyButtonStyle" TargetType="Button">
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <ContentPresenter Content="{TemplateBinding Content}"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="LoginButton" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="Template" >
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="8" Width="320" Height="40" Background="#FF344561">
+                                <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="bookCode" TargetType="TextBox">
+            <Style.Setters>
+                <Setter Property="Height" Value="35" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="Template" >
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border CornerRadius="8" Height="35" BorderBrush="#ACBBD4" BorderThickness="1">
+                                <ContentPresenter  VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="setOkButton" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="Template" >
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="8" Width="150" Height="50" Background="#FF344561">
+                                <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="setCloseButton" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="Template" >
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="8" Width="150" Height="50" Background="#FFDCDCDC">
+                                <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        
+        <Style x:Key="15号字体" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="Foreground" Value="#FF344561" />
+                <Setter Property="FontWeight" Value="Thin" />
+                <Setter Property="FontFamily"  Value="楷体" />
+            </Style.Setters>
+        </Style>
+        <Style x:Key="15号字体蓝色" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="Foreground" Value="#2F86F7" />
+                <Setter Property="FontWeight" Value="Thin" />
+                <Setter Property="FontFamily"  Value="楷体" />
+            </Style.Setters>
+        </Style>
+        <Style x:Key="搜索Button" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="8" Width="40" Height="30">
+                                <ContentPresenter Content="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="Border" TargetType="Border">
+            <Style.Setters>
+                <Setter Property="Background" Value="Black" />
+                <Setter Property="Opacity" Value="0.3" />
+            </Style.Setters>
+        </Style>
+        <Style x:Key="DataGridHeader" TargetType="Label">
+            <Style.Setters>
+               
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="Foreground" Value="Black" />
+                <Setter Property="FontFamily" Value="楷体" />
+            </Style.Setters>
+        </Style>
+        <Style x:Key="CellContent" TargetType="Label" >
+            <Style.Setters>
+                <Setter Property="Foreground" Value="#2F86F7" />
+                <Setter Property="FontSize" Value="15" />
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="VerticalAlignment" Value="Center" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="BorderThickness" Value="0" />
+            </Style.Setters>
+        </Style>
+        <Style x:Key="ISBNTextBox" TargetType="TextBox" >
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="楷体" />
+                <Setter Property="FontSize" Value="15"></Setter>
+                <Setter Property="Foreground" Value="#ACBBD4" />
+                <Setter Property="BorderThickness" Value="1" />
+                <Setter Property="BorderBrush" Value="#344561" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                <Setter Property="Template" >
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border CornerRadius="8" Height="30" BorderBrush="#ACBBD4" BorderThickness="1">
+                                <TextBox BorderThickness="0" InputMethod.IsInputMethodEnabled="False" FontSize="15" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="#ACBBD4" Margin="5,0,0,0" Text="{Binding ISBN}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+        <LinearGradientBrush x:Key="ComboBox.Static.Background" EndPoint="0,1" StartPoint="0,0">
+            <GradientStop Color="#FFF0F0F0" Offset="0.0"/>
+            <GradientStop Color="#FFE5E5E5" Offset="1.0"/>
+        </LinearGradientBrush>
+    </Application.Resources>
+</Application>

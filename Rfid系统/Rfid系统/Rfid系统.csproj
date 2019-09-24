@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4D59FF3-5C87-4160-8368-BC120091CC52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Rfid系统</RootNamespace>
+    <AssemblyName>Rfid系统</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AipSdk, Version=3.6.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AipSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib, Version=1.0.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero2" />
+    <Reference Include="RFID_Reader_Cmds">
+      <HintPath>..\..\WpfApp2\WpfApp2\bin\x86\Debug\RFID_Reader_Cmds.dll</HintPath>
+    </Reference>
+    <Reference Include="RFID_Reader_Com">
+      <HintPath>..\..\WpfApp2\WpfApp2\bin\x86\Debug\RFID_Reader_Com.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tesseract, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tesseract.3.3.0\lib\net45\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="zxing, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.4.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.4\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BLL\Http.cs" />
+    <Compile Include="BLL\ORC.cs" />
+    <Compile Include="BLL\Rfid.cs" />
+    <Compile Include="DAL\AddHDDAL.cs" />
+    <Compile Include="DAL\AddRfidDAL.cs" />
+    <Compile Include="DAL\BingCorrectionEditDAL.cs" />
+    <Compile Include="DAL\ChangePassWordDAL.cs" />
+    <Compile Include="DAL\ConnDAL.cs" />
+    <Compile Include="DAL\DeleteDAL.cs" />
+    <Compile Include="DAL\DeletePNDAL.cs" />
+    <Compile Include="DAL\GetBingHistoryDAL.cs" />
+    <Compile Include="DAL\GetBookListByISBNDAL.cs" />
+    <Compile Include="DAL\GetCallNumberByIdDAL.cs" />
+    <Compile Include="DAL\GetCsDAL.cs" />
+    <Compile Include="DAL\GetHDDCQKDAL.cs" />
+    <Compile Include="DAL\GetPeriodicalHistoryDAL.cs" />
+    <Compile Include="DAL\GetPlaceListDAL.cs" />
+    <Compile Include="DAL\GetPNDAL.cs" />
+    <Compile Include="DAL\GetUserDAL.cs" />
+    <Compile Include="DAL\HDEditDAL.cs" />
+    <Compile Include="DAL\HDHistoryDAL.cs" />
+    <Compile Include="DAL\LoginDAL.cs" />
+    <Compile Include="DAL\PeriadicalChangeDAL.cs" />
+    <Compile Include="DAL\PeriodicalAddDAL.cs" />
+    <Compile Include="DAL\PNAddDAL.cs" />
+    <Compile Include="DAL\PNEditDAL.cs" />
+    <Compile Include="DAL\RidofDAL.cs" />
+    <Compile Include="DAL\SelectCataOrderByIDDAL.cs" />
+    <Compile Include="DAL\SelectHDOneDAL.cs" />
+    <Compile Include="DAL\SelectListDAL.cs" />
+    <Compile Include="DAL\SelectLocalDAL.cs" />
+    <Compile Include="DAL\SelectOneDAL.cs" />
+    <Compile Include="DAL\ServerSetting.cs" />
+    <Compile Include="DialogHelper.cs" />
+    <Compile Include="Model\BingHistoryInfo.cs" />
+    <Compile Include="Model\CallNumberInfo.cs" />
+    <Compile Include="Model\HDDCQKInfo.cs" />
+    <Compile Include="Model\ISBNbookListInfo.cs" />
+    <Compile Include="Model\LoginInfo.cs" />
+    <Compile Include="Model\MarCodeInfo.cs" />
+    <Compile Include="Model\MarInfo.cs" />
+    <Compile Include="Model\PeriodicalCollectionInfo.cs" />
+    <Compile Include="Model\PeriodicalInfo.cs" />
+    <Compile Include="Model\PeriodicalsInfo.cs" />
+    <Compile Include="Model\PlaceInfo.cs" />
+    <Compile Include="Model\PNInfo.cs" />
+    <Compile Include="Model\QueryInfo.cs" />
+    <Compile Include="Model\RetrunInfo.cs" />
+    <Compile Include="Model\UserInfo.cs" />
+    <Compile Include="Objextension.cs" />
+    <Compile Include="ViewModel\BingCorrectionMessageViewModel.cs" />
+    <Compile Include="ViewModel\BingHistoryViewModel.cs" />
+    <Compile Include="ViewModel\BingListViewModel.cs" />
+    <Compile Include="ViewModel\BIssueSubscriptionViewModel.cs" />
+    <Compile Include="ViewModel\CallNumberViewModel.cs" />
+    <Compile Include="ViewModel\ChangePassWordViewModel.cs" />
+    <Compile Include="ViewModel\DetailsViewModel.cs" />
+    <Compile Include="ViewModel\HDHistoryViewModel.cs" />
+    <Compile Include="ViewModel\ISBNListViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MarCodeViewModel.cs" />
+    <Compile Include="ViewModel\PeriodicalChooseViewModel.cs" />
+    <Compile Include="ViewModel\PeriodicalHistoryViewModel.cs" />
+    <Compile Include="ViewModel\PeriodicalViewModel.cs" />
+    <Compile Include="ViewModel\PNChooseViewModel.cs" />
+    <Compile Include="ViewModel\PrintSetViewModel.cs" />
+    <Compile Include="ViewModel\QueryViewModel.cs" />
+    <Compile Include="ViewModel\RFIDBindingViewModel.cs" />
+    <Compile Include="ViewModel\SetViewModel.cs" />
+    <Compile Include="View\BindingCorrectionControl.xaml.cs">
+      <DependentUpon>BindingCorrectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BingCorrectionMessageControl.xaml.cs">
+      <DependentUpon>BingCorrectionMessageControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BingHistoryControl.xaml.cs">
+      <DependentUpon>BingHistoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BIssueSubscriptionControl.xaml.cs">
+      <DependentUpon>BIssueSubscriptionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CallNumberControl.xaml.cs">
+      <DependentUpon>CallNumberControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChangeControl.xaml.cs">
+      <DependentUpon>ChangeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChangeSuccessControl.xaml.cs">
+      <DependentUpon>ChangeSuccessControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\DetailsControl.xaml.cs">
+      <DependentUpon>DetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditControl.xaml.cs">
+      <DependentUpon>EditControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ErrorPage.xaml.cs">
+      <DependentUpon>ErrorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrequencyChooseControl.xaml.cs">
+      <DependentUpon>FrequencyChooseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\HDHistroyControl.xaml.cs">
+      <DependentUpon>HDHistroyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ISBNListControl.xaml.cs">
+      <DependentUpon>ISBNListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Load.xaml.cs">
+      <DependentUpon>Load.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainControl.xaml.cs">
+      <DependentUpon>MainControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MarCodeAddControl.xaml.cs">
+      <DependentUpon>MarCodeAddControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MarCodePrintControl.xaml.cs">
+      <DependentUpon>MarCodePrintControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeriodicalChangeControl.xaml.cs">
+      <DependentUpon>PeriodicalChangeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeriodicalChooseControl.xaml.cs">
+      <DependentUpon>PeriodicalChooseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeriodicalControl.xaml.cs">
+      <DependentUpon>PeriodicalControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PeriodicalHistoryControl.xaml.cs">
+      <DependentUpon>PeriodicalHistoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PersonalCenterControl.xaml.cs">
+      <DependentUpon>PersonalCenterControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PNChooseControl.xaml.cs">
+      <DependentUpon>PNChooseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PrintSetControl.xaml.cs">
+      <DependentUpon>PrintSetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\QueryControl.xaml.cs">
+      <DependentUpon>QueryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RFIDBindingControl.xaml.cs">
+      <DependentUpon>RFIDBindingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetControl.xaml.cs">
+      <DependentUpon>SetControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\BindingCorrectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BingCorrectionMessageControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BingHistoryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BIssueSubscriptionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CallNumberControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ChangeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ChangeSuccessControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\EditControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ErrorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FrequencyChooseControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HDHistroyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ISBNListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Load.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MarCodeAddControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MarCodePrintControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeriodicalChangeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeriodicalChooseControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeriodicalControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PeriodicalHistoryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PersonalCenterControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PNChooseControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PrintSetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\QueryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RFIDBindingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SetControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\头像.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\条码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\搜索按钮.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RFID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\叉叉.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\无数据.jpg" />
+    <Resource Include="Images\未连接.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\图层.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RFID智能绑定系统登录页.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\图层RFID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RFIDLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\用户.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\密码确认.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\返回.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\索取号弹框%282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\叉.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\书标打印无点击样式.png" />
+    <Resource Include="Images\基本设置无点击样式.png" />
+    <Resource Include="Images\条码打印无点击样式.png" />
+    <Resource Include="Images\查询图书无点击样式.png" />
+    <Resource Include="Images\退出无点击样式.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\书标打印点击样式.png" />
+    <Resource Include="Images\基本设置点击样式.png" />
+    <Resource Include="Images\条码打印点击样式.png" />
+    <Resource Include="Images\查询图书点击样式.png" />
+    <Resource Include="Images\退出点击样式.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Email.png" />
+    <Resource Include="Images\IDCard.png" />
+    <Resource Include="Images\Phone.png" />
+    <Resource Include="Images\RoleLevel.png" />
+    <Resource Include="Images\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\编辑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\三角形1.png" />
+    <Resource Include="Images\三角形2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\返回01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\编辑%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\绑定结果.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\未绑定成功.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\绑定成功.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\书标2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\条码2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bing2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\书标1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\条码1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\退出1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\夔牛LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\默认头像.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\期刊绑定点击样式.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bing1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\过刊合订1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\过刊合订2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\期刊绑定2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\查询2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\查询1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RFID绑定点击样式.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RFID绑定无点击样式.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\密码.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\展示.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Tesseract.3.3.0\build\Tesseract.targets" Condition="Exists('..\packages\Tesseract.3.3.0\build\Tesseract.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Tesseract.3.3.0\build\Tesseract.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Tesseract.3.3.0\build\Tesseract.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.Lib.x86.11.1.0.5405\build\Atalasoft.dotImage.Lib.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.Lib.x86.11.1.0.5405\build\Atalasoft.dotImage.Lib.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.x86.11.1.0.5405\build\Atalasoft.dotImage.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.x86.11.1.0.5405\build\Atalasoft.dotImage.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.PdfDoc.x86.11.1.0.5405\build\Atalasoft.PdfDoc.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.PdfDoc.x86.11.1.0.5405\build\Atalasoft.PdfDoc.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.Ocr.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.Ocr.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\Atalasoft.dotImage.Ocr.Abbyy.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.Abbyy.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Atalasoft.dotImage.Ocr.Abbyy.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.Abbyy.x86.targets'))" />
+  </Target>
+  <Import Project="..\packages\Atalasoft.dotImage.Lib.x86.11.1.0.5405\build\Atalasoft.dotImage.Lib.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.Lib.x86.11.1.0.5405\build\Atalasoft.dotImage.Lib.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.dotImage.x86.11.1.0.5405\build\Atalasoft.dotImage.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.x86.11.1.0.5405\build\Atalasoft.dotImage.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.PdfDoc.x86.11.1.0.5405\build\Atalasoft.PdfDoc.x86.targets" Condition="Exists('..\packages\Atalasoft.PdfDoc.x86.11.1.0.5405\build\Atalasoft.PdfDoc.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.dotImage.Ocr.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.Ocr.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.x86.targets')" />
+  <Import Project="..\packages\Atalasoft.dotImage.Ocr.Abbyy.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.Abbyy.x86.targets" Condition="Exists('..\packages\Atalasoft.dotImage.Ocr.Abbyy.x86.11.1.0.5405\build\Atalasoft.dotImage.Ocr.Abbyy.x86.targets')" />
+</Project>

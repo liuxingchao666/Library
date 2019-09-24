@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="WpfApp2.Controls.QueryControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp2.Controls"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="1024" d:DesignWidth="1280" Name="control" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="1203*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/ControlImages/背景(1).png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="60px"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="344px"/>
+            <RowDefinition  Height="90px"/>
+            <RowDefinition  Height="40px"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" Height="40"  HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="0,0,0,1">
+            <Button  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Width="15" BorderThickness="0" Height="28" Margin="60,0,0,0" Name="btn" Command="{Binding BackCommand}" CommandParameter="{Binding ElementName=control}">
+                <Button.Content>
+                    <Image  Source="/ControlImages/返回.png" Stretch="Fill" ></Image>
+                </Button.Content>
+            </Button>
+            <Button Click="Button_Click_1" Width="58" Height="40" Margin="10,0,0,0" Padding="0"  HorizontalContentAlignment="Center"   Command="{Binding BackCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=control}" Style="{StaticResource EmptyButtonStyle}">
+                <Button.Content>
+                    <Label Foreground="#FFFFFF" BorderThickness="0" Content="返回" FontSize="25" VerticalContentAlignment="Center"></Label>
+                </Button.Content>
+            </Button>
+         
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" Height="40" HorizontalAlignment="Right" Grid.ColumnSpan="2" Margin="0,0,60,0">
+            <Label HorizontalAlignment="Right" Foreground="Yellow" FontSize="25" Name="time">操作时间: 60s</Label>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.Column="1" Margin="112.747,0,190,1">
+            <Border  CornerRadius="45" Height="90" Width="900" BorderThickness="1" BorderBrush="#FF737070" Background="White" >
+                <TextBox TextChanged="TextBox1_TextChanged" InputMethod.IsInputMethodEnabled="True" GotFocus="TextBox1_GotFocus" PreviewMouseLeftButtonDown="TextBox1_PreviewMouseLeftButtonDown" PreviewKeyDown="TextBox1_PreviewKeyDown" LostFocus="TextBox1_LostFocus" Name="textBox1" Width="800" Padding="0,25,0,0" BorderThickness="0" FontSize="30" Text="{Binding TxtCommand}" Foreground="Gray"  />
+            </Border>
+            <Label Height="80" Width="790" PreviewMouseRightButtonDown="Txt_PreviewMouseRightButtonDown" Margin="-900,5,0,5" Name="txt" MouseEnter="Txt_MouseEnter" GotFocus="Txt_GotFocus_1" Content="请输入查询所借的书籍名" FontSize="30" MouseDoubleClick="Txt_MouseDoubleClick" VerticalContentAlignment="Center" VerticalAlignment="Center" BorderThickness="0" Foreground="#5169a7"></Label>
+            <Button Width="40" Click="Button_Click" Height="40" Margin="-142,0,0,0" Style="{StaticResource EmptyButtonStyle}"   Command="{Binding SelectCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=textBox1}">
+                <Button.Content>
+                    <Image Source="/ControlImages/搜索.png" />
+                </Button.Content>
+            </Button>
+          
+        </StackPanel>
+        <Label VerticalAlignment="Top"  Content="热搜榜:" Foreground="#FFFFFF" FontSize="25px" HorizontalAlignment="Left" Margin="152,10,0,0" Grid.Row="5"  Padding="0" Grid.Column="1" />
+        <WrapPanel HorizontalAlignment="Left" Name="wrqp" VerticalAlignment="Top" Width="757"  Height="auto" Margin="245.747,0,0,6" Grid.Column="1" Grid.Row="5">
+        </WrapPanel>
+        <TextBox Name="YC" Panel.ZIndex="0" Width="1" Height="1"></TextBox>
+    </Grid>
+
+
+</UserControl>

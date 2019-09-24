@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="WpfApp2.Controls.ShowControl.Renew2ShowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp2.Controls.ShowControl"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             d:DesignHeight="480" d:DesignWidth="650" Loaded="UserControl_Loaded_1" Name="Renew2Page">
+    <Border Background="White" CornerRadius="50" >
+        <Grid Width="650" Height="480" >
+            <Canvas Height="190" Width="650"  Margin="0,-290,0,0">
+                <Image Width="140" Height="140" Source="..\..\ControlImages\图标.png" Margin="255,50"/>
+            </Canvas>
+            <Canvas Height="113" Width="650"  Margin="0,13,0,0">
+                <Label Content="本书籍可续借" FontSize="28" Foreground="#666666" Canvas.Left="206" Canvas.Bottom="49" />
+                <Label Content="30" FontSize="28" Foreground="#666666" Canvas.Left="375" Canvas.Bottom="49"/>
+                <Label Content="天" FontSize="28" Foreground="#666666" Canvas.Left="410" Canvas.Bottom="49"/>
+                
+                <Label Content="（温馨提示：本书籍可续借" FontSize="20" Foreground="#CBCBCB" Canvas.Left="106" Canvas.Bottom="21"/>
+                <Label Content="30" FontSize="20" Foreground="#CBCBCB" Canvas.Left="350" Canvas.Bottom="21"/>
+                <Label Content="次,您已续借" FontSize="20" Foreground="#CBCBCB" Canvas.Left="375" Canvas.Bottom="21"/>
+                <Label Content="30" FontSize="20" Foreground="#CBCBCB" Canvas.Left="480" Canvas.Bottom="21"/>
+                <Label Content="次）" FontSize="20" Foreground="#CBCBCB" Canvas.Left="505" Canvas.Bottom="21"/>
+               
+            </Canvas>
+            <Canvas Width="650" Height="177" Margin="0,300,0,0">
+                <Border BorderBrush="#CECECE" BorderThickness="1" Width="200" Height="55" CornerRadius="28" Background="#CECECE" Margin="85,40">
+                    <Label TabIndex="2" Content="取消" Foreground="#FFFFFF" FontSize="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Width="150" Background="#CECECE" BorderThickness="0">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <i:InvokeCommandAction
+                        Command="{Binding CloseCommand, Mode=OneWay}" CommandParameter="{Binding ElementName=Renew2Page}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Label>
+                </Border>
+                <Border BorderBrush="#FF764D" BorderThickness="1" Width="200" Height="55" CornerRadius="28" Background="#FF764D" Margin="365,40">
+                    <Label TabIndex="2" Content="确认" Background="#FF764D" Width="150" BorderThickness="0" Foreground="#FFFFFF" FontSize="28" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <i:InvokeCommandAction
+                        Command="{Binding OkCommond, Mode=OneWay}" CommandParameter="{Binding ElementName=Renew2Page}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Label>
+                </Border>
+                <Label FontSize="16" Content="30" Canvas.Bottom="30" Name="times" Canvas.Left="260" Foreground="#CBCBCB"/>
+                <Label Content="秒后将返回主页" Canvas.Left="283" Canvas.Bottom="30" FontSize="16" Foreground="#CBCBCB"/>
+            </Canvas>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="DoorProhibit.Controls.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoorProhibit.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1280">
+    <Viewbox Stretch="Fill">
+        <Grid Name="Grid" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#0CE59B" Offset="0" />
+                    <GradientStop Color="#00BEF6" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <StackPanel Orientation="Horizontal" Grid.Row="0" Height="800">
+                <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Width="460" HorizontalAlignment="Center">
+                    <WrapPanel Width="460" Height="80" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Border Margin="30,36,0,0" CornerRadius="50" Background="White" Width="20" Opacity="0.3" VerticalAlignment="Center" Height="20">
+                          
+                        </Border>
+                        <Border CornerRadius="50" Background="White" Width="10" Margin="-20,36,0,0" VerticalAlignment="Center" Height="10">
+
+                        </Border>
+                        <Label FontSize="30" Margin="10,30,0,0" Content="门禁系统" Foreground="White" VerticalAlignment="Center" />
+                  
+                    </WrapPanel>
+                    <Canvas Width="460" Height="90">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Canvas.Bottom="0">
+                            <Label Width="50"></Label>
+                            <Label Foreground="White" FontSize="20">进出人数：</Label>
+                        </StackPanel>
+                    </Canvas>
+                    <Label Height="30" />
+                    <WrapPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Label Width="100"></Label>
+                        <Label Foreground="White" FontSize="30" Name="InNum" Content="{Binding InNum}"></Label>
+                        <Label Width="30"></Label>
+                        <Label Foreground="White" FontSize="30" Name="OutNum" Content="{Binding OutNum}"></Label>
+                    </WrapPanel>
+                 
+                    <Canvas Width="460" Height="89">
+                        <Label Foreground="White" FontSize="20" Canvas.Left="50" Canvas.Bottom="0">当前时间：</Label>
+                    </Canvas>
+                    <Canvas Width="460" Height="93" >
+                        <Label Foreground="White" FontSize="50" Canvas.Bottom="0" Canvas.Left="90" Name="NowTime" Content="{Binding NowTime}" ></Label>
+                        <Label  Foreground="White" FontSize="20" Canvas.Left="300" Canvas.Top="23" Name="WeekNow" Content="{Binding WeekNow}"></Label>
+                        <Label  Foreground="White" FontSize="20" Canvas.Left="300" Canvas.Top="53" Name="NowDate" Content="{Binding NowDate}"></Label>
+                    </Canvas>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Width="390">
+                    <Canvas Height="370" Width="390">
+                        <Border Width="350" Height="300" Background="White" CornerRadius="50" Canvas.Bottom="0" Canvas.Left="0">
+                            <Canvas>
+                                <Image Source="{Binding PIC}" Name="pic" Stretch="Fill" Width="141" Height="141" Canvas.Left="105" Canvas.Top="30"></Image>
+                                <Label FontSize="18" Foreground="#B9B9B9" Canvas.Left="121" Canvas.Top="200">设备运行状态</Label>
+                                <Label FontSize="35" Foreground="{Binding Color}" Content="{Binding state}"  Canvas.Left="80" Width="210" Canvas.Top="237" Name="state" Padding="0,0,0,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center"></Label>
+                            </Canvas>
+                        </Border>
+                    </Canvas>
+                    <Canvas Height="360" Margin="-430,20,0,0" Width="750">
+                        <Border Width="750" Height="300" Background="White" CornerRadius="50" Canvas.Top="40" Canvas.Left="0">
+                            <StackPanel Orientation="Vertical">
+                                <Canvas Height="50">
+                                    <Image Source="../images/档案.png" Width="30" Height="30" Canvas.Left="30" Canvas.Top="12"></Image>
+                                    <Label Foreground="#07D7BD" FontWeight="Black" FontSize="20" Canvas.Top="10" Canvas.Left="65">出入图书:</Label>
+                                </Canvas>
+                                <Canvas>
+                                    <DataGrid Width="750" Height="205" GridLinesVisibility="None" RowHeaderWidth="0" CanUserAddRows="False" AutoGenerateColumns="False"  ItemsSource="{Binding message}"  ColumnHeaderHeight="0" ColumnWidth="*"  ScrollViewer.HorizontalScrollBarVisibility="Hidden" CanUserSortColumns="False"  ScrollViewer.CanContentScroll="False" BorderThickness="0" Background="White" Foreground="Gray" Name="message"   HeadersVisibility="None" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+                                        <DataGrid.RowStyle>
+                                            <Style TargetType="DataGridRow">
+                                                <Setter Property="BorderThickness" Value="0"/>
+                                                <Setter Property="Height" Value="40"/>
+                                            </Style>
+                                        </DataGrid.RowStyle>
+                                        <DataGrid.CellStyle>
+                                            <Style TargetType="DataGridCell">
+                                                <Setter Property="Padding" Value="0"/>
+                                                <Setter Property="BorderThickness" Value="0"/>
+                                            </Style>
+                                        </DataGrid.CellStyle>
+                                        <DataGrid.ColumnHeaderStyle>
+                                            <Style TargetType="DataGridColumnHeader">
+                                                <Setter Property="BorderThickness" Value="0"/>
+                                            </Style>
+                                        </DataGrid.ColumnHeaderStyle>
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn Width="0.1*">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+
+                                                        <Label HorizontalContentAlignment="Right" Foreground="#B9B9B9" Content="{Binding num}" FontSize="18" />
+                                                      
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn Width="0.6*">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+
+                                                        <Label Content="{Binding FileName}"  Foreground="#B9B9B9" HorizontalContentAlignment="Left" FontSize="18" />
+                                                        
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn Width="0.3*">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+
+                                                        <Label Content="{Binding date}"  Foreground="#B9B9B9" HorizontalContentAlignment="Right" FontSize="18" />
+                                                       
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn Width="12"></DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Canvas>
+                            </StackPanel>
+                        </Border>
+                    </Canvas>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="2" Width="430">
+                    <Canvas Height="70">
+                        <Button Click="Button_Click" Style="{StaticResource EmptyButtonStyle}" Width="50" Height="50" Canvas.Right="50" Command="{Binding setUpCommond}" Canvas.Left="365" Canvas.Top="18" >
+                            <Button.Content>
+                                <Image Source="../Images/设置.png" Height="40" Width="40" Stretch="Fill"></Image>
+                            </Button.Content>
+                        </Button>
+                    </Canvas>
+                    <Canvas>
+                        <Border Width="400" Height="660" Background="White" CornerRadius="50" Canvas.Left="0">
+                            <StackPanel Orientation="Vertical">
+                                <Canvas>
+                                    <Image Source="../images/报警.png" Width="30" Height="30" Canvas.Left="30" Canvas.Top="10"></Image>
+                                    <Label Foreground="#07D7BD" FontWeight="Black" FontSize="20" Canvas.Top="10" Canvas.Left="65">报警记录:</Label>
+                                </Canvas>
+                                <Canvas>
+                                    <DataGrid Background="White" Foreground="#B9B9B9" GridLinesVisibility="None" BorderThickness="0" ItemsSource="{Binding AlarmList}" AutoGenerateColumns="False" CanUserAddRows="False" Width="400" Height="550" Canvas.Top="50" Name="AlarmList"  HeadersVisibility="None" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+                                        <DataGrid.RowStyle>
+                                            <Style TargetType="DataGridRow">
+                                                <Setter Property="BorderThickness" Value="0"/>
+                                                <Setter Property="Height" Value="40"/>
+                                            </Style>
+                                        </DataGrid.RowStyle>
+                                        <DataGrid.CellStyle>
+                                            <Style TargetType="DataGridCell">
+
+                                                <Setter Property="BorderThickness" Value="0"/>
+
+                                            </Style>
+                                        </DataGrid.CellStyle>
+                                        <DataGrid.ColumnHeaderStyle>
+                                            <Style TargetType="DataGridColumnHeader">
+                                                <Setter Property="BorderThickness" Value="0"/>
+                                            </Style>
+                                        </DataGrid.ColumnHeaderStyle>
+                                        <DataGrid.Columns>
+                                            <DataGridTemplateColumn Width="0.1*">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="{Binding num}" FontSize="18"  Foreground="#B9B9B9"/>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn Width="0.4*">
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Label Content="{Binding FileName}"  Foreground="#B9B9B9" FontSize="18" HorizontalContentAlignment="Left" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                            <DataGridTemplateColumn Width="0.5*">
+                                                <DataGridTemplateColumn.CellTemplate >
+                                                    <DataTemplate >
+                                                        <Label Content="{Binding AlarmTime}"  Foreground="#B9B9B9" HorizontalContentAlignment="Left" FontSize="18" />
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </Canvas>
+                            </StackPanel>
+                        </Border>
+                    </Canvas>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Viewbox>
+</UserControl>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp2.View.TestView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TestView" Loaded="Page_Loaded" Closed="Window_Closed">
+
+    <Grid>
+       
+        <TextBox Name="tet" TextChanged="Tet_TextChanged" Width="100" Height="30" />
+        <Button Content="Button" HorizontalAlignment="Left" Margin="217,385,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="457,385,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="546,385,0,0" Background="#ff764d" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <!--<Button xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   Grid.Column="3" Command="{Binding HotSearchCommand}" Click="Button_Click" FontSize="18" Content="流逝:王安忆短篇小说篇.（英文）" Tag="流逝:王安忆短篇小说篇.（英文）" Style="{StaticResource 热搜榜}" CommandParameter="{ Binding ElementName = btn0}" Name="btn0"></Button>-->
+        <MediaElement Name="music" Source="user_download.mp3" LoadedBehavior="Manual" Visibility="Hidden" Panel.ZIndex="8"></MediaElement>
+        <Image Width="80" Height="80" Name="pic"/>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp2.View.ReportLossSuccessPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.View"
+        mc:Ignorable="d"
+       Height="580" Width="680" 
+         AllowsTransparency="True" Background="Transparent" OpacityMask="White" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ScrollViewer.VerticalScrollBarVisibility="Hidden"  WindowStyle="None" ShowActivated="False" Loaded="Window_Loaded">
+    <Grid>
+        <Border CornerRadius="50" Height="530" Width="650" Margin="10" BorderThickness="0" Background="White" BorderBrush="White" Opacity="0.8">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="#FF414141" BlurRadius="8"/>
+            </Border.Effect>
+        </Border>
+        <!--<Image  Source="../ControlImages/背景.png" Width="1280" Height="1024" Stretch="Fill"/>-->
+        <Border Width="650" Height="530" Margin="15,15,15,0" VerticalAlignment="Top" >
+            <Viewbox Stretch="Fill" Margin="0,0,0,-23">
+                <Grid Name="GRID">
+
+                </Grid>
+            </Viewbox>
+        </Border>
+    </Grid>
+</Window>

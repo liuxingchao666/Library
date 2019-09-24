@@ -1,0 +1,135 @@
+﻿<Window x:Class="WpfApp2.View.Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.View"
+        mc:Ignorable="d"
+        Title="Setting"  WindowStyle="None" Width="1280" Height="1024"
+     AllowsTransparency="True" WindowState="Maximized" Background="Transparent" OpacityMask="White"  WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ScrollViewer.VerticalScrollBarVisibility="Hidden" >
+    <!--<Grid>
+        <Border Background="Black" Opacity="0.3" />
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.9*" />
+                <RowDefinition Height="0.9*" />
+                <RowDefinition Height="0.3*" />
+                <RowDefinition Height="0.9*" />
+            </Grid.RowDefinitions>
+            <WrapPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" >
+                <Label FontSize="28" Content=" 服 务 器IP: " Foreground="#B9B9B9" Padding="0" VerticalContentAlignment="Center"/>
+                <Border CornerRadius="6" BorderThickness="1" BorderBrush="#EAEAEA" HorizontalAlignment="Center">
+                    <TextBox Background="Transparent" KeyDown="ServerIp_KeyDown" PreviewKeyDown="ServerIp_KeyDown" InputMethod.IsInputMethodSuspended="True" PreviewTextInput="ServerIp_PreviewTextInput" TextChanged="ServerIp_TextChanged" Name="serverIp" FontSize="28" VerticalContentAlignment="Center" Foreground="#EAEAEA" Width="340" BorderThickness="0"/>
+                </Border>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1">
+                <Label FontSize="28" Content="服务器端口: " Foreground="#B9B9B9" Padding="0" VerticalContentAlignment="Center"/>
+                <Border CornerRadius="6" BorderThickness="1" BorderBrush="#EAEAEA" HorizontalAlignment="Center">
+                    <TextBox Background="Transparent" KeyDown="ServerIp_KeyDown" PreviewKeyDown="ServerIp_KeyDown" InputMethod.IsInputMethodSuspended="True" PreviewTextInput="ServerIp_PreviewTextInput" TextChanged="ServerSite_TextChanged" Name="serverSite" FontSize="28" VerticalContentAlignment="Center" Foreground="#EAEAEA" Width="340" BorderThickness="0"/>
+                </Border>
+            </WrapPanel>
+            <WrapPanel Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Border Width="100" Height="40" CornerRadius="10" Background="#00D5B4">
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="try" Click="Try_Click">
+                        <Label Content="测试连接" Foreground="White" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </Button>
+                </Border>
+                <Label Width="30" />
+                <Border Width="100" Height="40" CornerRadius="10" Background="#2D89F4" Name="SaveBr" Visibility="Hidden">
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="save" Click="Save_Click">
+                        <Label Content="保存" Foreground="White" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </Button>
+                </Border>
+                <Label Width="30" />
+                <Border Width="100" Height="40" CornerRadius="10" Background="#FF764D">
+                    <Button Style="{StaticResource EmptyButtonStyle}" Name="back" Click="Back_Click">
+                        <Label Content="取消" Foreground="White" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    </Button>
+                </Border>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal" Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center">
+                <Label Name="errorCode" FontSize="15" Foreground="#FF2E00" Padding="0"/>
+            </WrapPanel>
+        </Grid>
+    </Grid>-->
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="../ControlImages/main.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--服务器IP-->
+        <WrapPanel Grid.Column="1" Grid.Row="2" Margin="0,0,0,30">
+            <StackPanel>
+                <Image Source="../ControlImages/IP.png" Stretch="Fill" Height="60" Width="60"></Image>
+                <Label  Content="服务器IP" HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="#FFFFFF" ></Label>
+
+            </StackPanel>
+            <Border BorderBrush="#FFFFFF" BorderThickness="0,0,0,2" Width="610" Margin="0,10">
+                <Grid Margin="20,0,0,0">
+                    <TextBox PreviewMouseRightButtonDown="ServerIp_PreviewMouseRightButtonDown" PreviewTextInput="ServerIp_PreviewTextInput" KeyDown="ServerIp_KeyDown" InputMethod.IsInputMethodSuspended="True"
+                        x:Name="serverIp" BorderThickness="0" Background="{x:Null}" FontSize="30" Foreground="#FFFFFF" FontWeight="Bold" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center"></TextBox>
+                </Grid>
+            </Border>
+        </WrapPanel>
+        <!--端口-->
+        <WrapPanel Grid.Column="1" Orientation="Horizontal" Grid.Row="3" Margin="0,0,0,30">
+            <StackPanel>
+                <Image Source="../ControlImages/端口.png" Stretch="Fill" Height="60" Width="60"></Image>
+                <Label  Content="端      口 " HorizontalContentAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="#FFFFFF"></Label>
+
+            </StackPanel>
+            <Border BorderBrush="#FFFFFF" BorderThickness="0,0,0,2" Width="610" Margin="0,10">
+                <Grid Margin="20,0,0,0">
+                    <TextBox PreviewMouseLeftButtonDown="ServerIp_PreviewMouseRightButtonDown" PreviewTextInput="ServerIp_PreviewTextInput" KeyDown="ServerIp_KeyDown" InputMethod.IsInputMethodSuspended="True"
+                         x:Name="serverSite"  BorderThickness="0" Background="{x:Null}" FontSize="30" Foreground="#FFFFFF" FontWeight="Bold"  VerticalAlignment="Center"   HorizontalContentAlignment="Center"></TextBox>
+                </Grid>
+            </Border>
+        </WrapPanel>
+
+        <WrapPanel Grid.Column="1" Grid.Row="5" Margin="0,50,0,0">
+            <Button Click="Back_Click" Width="220"  Style="{StaticResource 圆角28}" Content="返回" FontSize="30" Background="#ff764d">
+
+            </Button>
+            <Button Click="Try_Click"  Width="220"  Style="{StaticResource 圆角28}" Background="#00D5B4" 
+                     Content="确定" FontSize="30" Margin="260,0,0,0">
+            </Button>
+        </WrapPanel>
+        <Label Name="errorCode" Grid.Column="1" Grid.Row="5" FontSize="28" Foreground="#FFFF7400" VerticalAlignment="Bottom" HorizontalAlignment="Center"></Label>
+
+        <Label Content="操作时间:" Grid.Column="2"      Height="40" Foreground="Yellow" FontSize="24" HorizontalAlignment="Right" Margin="0,60,110,0" VerticalAlignment="Top"></Label>
+        <Label x:Name="Time" Content="" Grid.Column="2" Height="40" Foreground="Yellow" FontSize="25" HorizontalAlignment="Right" Margin="0,60,60,0" VerticalAlignment="Top"></Label>
+
+
+
+
+        <!--标题-->
+        <!--<Label Content="基 本 设 置" Grid.Column="1" Foreground="#5e97ff" FontSize="50" HorizontalAlignment="Center" 
+               VerticalAlignment="Center" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect Direction="-45" BlurRadius="1" ShadowDepth="0.5"  Opacity="0.9"></DropShadowEffect>
+            </Label.Effect>
+        </Label>-->
+        <!--返回-->
+        <!--<Button Command="{Binding ReturnCommand}" Width="180" Height="60"   Style="{StaticResource 简单样式}" Margin="40,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <WrapPanel>
+                -->
+        <!--<Image Source="/Images/退回.png" Stretch="Fill" Height=" 50" Width="70"></Image>-->
+        <!--
+                <Label Content=" 设置" FontSize="35" Foreground="#6FA2FF" ></Label>
+            </WrapPanel>
+        </Button>-->
+    </Grid>
+</Window>

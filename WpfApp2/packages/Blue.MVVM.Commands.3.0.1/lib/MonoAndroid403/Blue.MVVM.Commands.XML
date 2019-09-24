@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Blue.MVVM.Commands</name>
+    </assembly>
+    <members>
+        <member name="T:Blue.MVVM.Commands.CommandBase">
+            <summary>
+            non-generic command implementation. Logic for Execute and CanExecute has to be implemented in derived types
+            </summary>
+        </member>
+        <member name="P:Blue.MVVM.Commands.CommandBase.IsReentranceEnabledByDefault">
+            <summary>
+            gets or sets a value indicating wheter newly created Commands support reentrany on execution. The default value is false
+            </summary>
+        </member>
+        <member name="T:Blue.MVVM.Commands.CommandBase`1">
+            <summary>
+            generic command implementation. Logic for Execute and CanExecute has to be implemented in derived types
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Blue.MVVM.Commands.CommandBase`1.System#Windows#Input#ICommand#CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+            <returns>
+            true if this command can be executed; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Blue.MVVM.Commands.CommandBase`1.System#Windows#Input#ICommand#Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to null.</param>
+        </member>
+        <member name="M:Blue.MVVM.Commands.CommandBase`1.CanExecute(`0)">
+            <summary>
+            In a derived class, determines if the command can be executed. The default implentation returns always true.
+            </summary>
+            <param name="parameter">The parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Blue.MVVM.Commands.CommandBase`1.Execute(`0)">
+            <summary>
+            In a derived class, executes the command´s logic
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="E:Blue.MVVM.Commands.CommandBase`1.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="P:Blue.MVVM.Commands.CommandBase`1.IsReentranceEnabled">
+            <summary>
+            gets or sets a value indicating if the command can be executed again if it is still executing. The default behavior is to block reentrance, which means the command cannot be executed while it is still executing
+            </summary>
+        </member>
+        <member name="T:Blue.MVVM.Commands.Command">
+            <summary>
+            non generic command implementation for passing the execution logic as <see cref="T:System.Action"/> / <see cref="T:System.Func`1"/>s
+            </summary>
+        </member>
+        <member name="M:Blue.MVVM.Commands.Command.#ctor(System.Action,System.Func{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Blue.MVVM.Commands.Command"/> class.
+            </summary>
+            <param name="execute">the execution-logic of the command</param>
+            <param name="canExecute">The <see cref="T:System.Func`1"/> determining if the command can be executed</param>
+        </member>
+        <member name="P:Blue.MVVM.Commands.Command.IsReentranceEnabledByDefault">
+            <summary>
+            gets or sets a value indicating wheter newly created Commands support reentrany on execution. The default value is false
+            </summary>
+        </member>
+        <member name="T:Blue.MVVM.Commands.Command`1">
+            <summary>
+            generic command implementation for passing the execution logic as <see cref="T:System.Action"/> / <see cref="T:System.Func`1"/>s
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Blue.MVVM.Commands.Command`1.#ctor(System.Action{`0},System.Func{`0,System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Blue.MVVM.Commands.Command`1"/> class.
+            </summary>
+            <param name="execute">the execution-logic of the command</param>
+            <param name="canExecute">The <see cref="T:System.Func`1"/> determining if the command can be executed</param>
+            <exception cref="T:System.ArgumentNullException">execute</exception>
+        </member>
+        <member name="M:Blue.MVVM.Commands.Command`1.#ctor(System.Action,System.Func{System.Boolean})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Blue.MVVM.Commands.Command`1"/> class.
+            </summary>
+            <param name="execute">the execution-logic of the command</param>
+            <param name="canExecute">The <see cref="T:System.Func`1"/> determining if the command can be executed</param>
+            <exception cref="T:System.ArgumentNullException">execute</exception>
+        </member>
+        <member name="M:Blue.MVVM.Commands.Command`1.Execute(`0)">
+            <summary>
+            Executes the <see cref="T:Blue.MVVM.Commands.Command`1"/>s execution logic
+            </summary>
+            <param name="parameter">The parameter.</param>
+        </member>
+        <member name="M:Blue.MVVM.Commands.Command`1.CanExecute(`0)">
+            <summary>
+            returns the result of the <see cref="T:Blue.MVVM.Commands.Command`1"/>s CanExecute logic
+            </summary>
+            <param name="parameter">The parameter.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,383 @@
+﻿<UserControl x:Class="WpfApp2.Controls.RenewListControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             xmlns:local="clr-namespace:WpfApp2.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="1024" d:DesignWidth="1280" Name="control" Loaded="Control_Loaded" Tag="1">
+    <Viewbox Stretch="Fill" ScrollViewer.VerticalScrollBarVisibility="Auto" MinHeight="1024"  >
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="..\ControlImages\main.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Canvas Width="1280" Height="1024" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Button  Margin="60,59,1205,937" Width="100" Command="{Binding BackCommand}" CommandParameter="{Binding ElementName=control}" Style="{StaticResource EmptyButtonStyle}" Panel.ZIndex="3">
+                    <Button.Content>
+                        <Image  Width="100" Source="..\ControlImages\返回.png"  Height="28" HorizontalAlignment="Left">
+                    </Image>
+                    </Button.Content>
+                </Button>
+              
+                <TextBox Visibility="Hidden" Name="MR" Margin="750,45,60,923" Height="56" Text="请输入查询所借的书籍名或作家" Foreground="Gray"  Panel.ZIndex="2" MouseEnter="TextBox_MouseEnter"  Width="440" Background="{x:Null}" BorderThickness="0" TextAlignment="Left"   Opacity="0.5"  FontSize="20" VerticalContentAlignment="Center" BorderBrush="#FFB3ABAE"/>
+                <Border  Visibility="Hidden" CornerRadius="28" Height="56" Width="500" Margin="720,45,60,923" BorderThickness="1" Background="White" >
+                    <TextBox  Name="text"  Height="56" Text="{Binding TestStr}" Width="450" MouseLeave="TextBox_MouseLeave" Background="{x:Null}" BorderThickness="0" TextAlignment="Left"  Foreground="Gray" Opacity="0.8"  FontSize="20" VerticalContentAlignment="Center" BorderBrush="#FFB3ABAE" Margin="25,0,22.6,-1.6"/>
+                </Border>
+               
+                  
+                    <Button  Margin="75,48,1119,0" Width="100" Command="{Binding BackCommand}" CommandParameter="{Binding ElementName=control}" Style="{StaticResource EmptyButtonStyle}" Panel.ZIndex="3">
+                        <Button.Content>
+                            <Label  Width="100" Content="返回" Foreground="White" Height="50" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="28">
+                            </Label>
+                        </Button.Content>
+                    </Button>
+              
+                <Border CornerRadius="20" Background="White" Height="810" VerticalAlignment="Top" Width="1160" Canvas.Left="60" Canvas.Top="154">
+                    <Canvas HorizontalAlignment="Left"   Height="810" Margin="10,0,-10,-10.4" VerticalAlignment="Top" Width="1160" RenderTransformOrigin="-1.992,-0.886" >
+                        <Image Height="22" Width="6" Source="..\ControlImages\矩形 4.png" Margin="20,39,1184,818" Stretch="Fill" Panel.ZIndex="1"/>
+                        <Label Height="43" Width="300" Content="所借书籍列表" FontSize="25" Margin="-86,-3,944,0" VerticalAlignment="Center" Canvas.Left="116" Canvas.Top="30.1" Foreground="#2F7DF6"/>
+                    </Canvas>
+                </Border>
+                <Button  Visibility="Hidden"  Command="{Binding ShowCommond}" BorderThickness="0" CommandParameter="{Binding ElementName=GRID}" HorizontalAlignment="Left"  Height="24"  Margin="1166,61.8,0,0" VerticalAlignment="Top" Width="24"  RenderTransformOrigin="3.025,1.167">
+                    <Button.Content>
+                        <Image  Stretch="Fill" Source="..\ControlImages\搜索.png"/>
+                    </Button.Content>
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Style.Setters>
+                                <Setter Property="Background" Value="White"/>
+                            </Style.Setters>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Content" Value="1" >
+                                    </Setter>
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate>
+                                                <Image Stretch="Fill" Source="..\ControlImages\搜索.png"/>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Label Content="操作时间: 60s" FontSize="25" Foreground="Yellow" Margin="0,48,0,0" Width="1220" Height="40" HorizontalContentAlignment="Right" Name="RemainingTime"/>
+                <Border Name="QX" Visibility="Visible" BorderBrush="White" Background="#2D89F4" BorderThickness="0" Width="22" Height="22" Margin="150,261,0,0" Panel.ZIndex="5">
+                    <Image Source="..\ControlImages\闪勾.png" Width="22" HorizontalAlignment="Left" Height="22" MouseDown="Img_MouseEnter" Name="img" Tag="0"  VerticalAlignment="Top">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <i:InvokeCommandAction
+                        Command="{Binding SelectAllCommond, Mode=OneWay}" CommandParameter="{Binding ElementName=control}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Image>
+                </Border>
+                <Border Name="TH" CornerRadius="10,10,0,0" Visibility="Visible" Background="#2D89F4" BorderBrush="#2D89F4" BorderThickness="1" Height="64" Margin="90,236,60,0" VerticalAlignment="Top" Width="1100">
+                    <StackPanel Orientation="Horizontal" >
+                        <Label FontSize="25" Margin="20,20,0,0" Foreground="White" HorizontalContentAlignment="Right" Padding="0,0,0,0" Content="全选" Width="120">
+                            <i:Interaction.Triggers>
+                                <i:EventTrigger EventName="MouseDown">
+                                    <i:InvokeCommandAction
+                        Command="{Binding SelectAllCommond, Mode=OneWay}" CommandParameter="{Binding ElementName=control}"/>
+                                </i:EventTrigger>
+                            </i:Interaction.Triggers>
+                        </Label>
+                        <Label FontSize="25" Margin="40,20,0,0" Foreground="White"  Padding="0,0,0,0" >序号</Label>
+                        <Label FontSize="25" Margin="154,20,0,0" Foreground="White" Padding="0,0,0,0" >书名</Label>
+                        <Label FontSize="25" Margin="200,20,0,0" Foreground="White" Padding="0,0,0,0" >借阅开始时间</Label>
+                        <Label FontSize="25" Margin="105,20,0,0" Foreground="White" Padding="0,0,0,0" >借阅归还时间</Label>
+                        <!--<Label FontSize="25" Margin="100,20,0,0" Foreground="White" Padding="0,0,0,0" >操作</Label>-->
+                    </StackPanel>
+                </Border>
+                <Border Name="THH" CornerRadius="10,10,0,0" Visibility="Hidden"  Background="#2D89F4" BorderBrush="#2D89F4" BorderThickness="1" Height="64" Margin="90,236,60,0" VerticalAlignment="Top" Width="1100">
+                    <StackPanel Orientation="Horizontal" >
+                        <Label FontSize="25" Margin="30,20,0,0" Foreground="White" Padding="0,0,0,0" >序号</Label>
+                        <Label FontSize="25" Margin="130,20,0,0" Foreground="White" Padding="0,0,0,0" >书名</Label>
+                        <Label FontSize="25" Margin="180,20,0,0" Foreground="White" Padding="0,0,0,0" >借阅开始时间</Label>
+                        <Label FontSize="25" Margin="100,20,0,0" Foreground="White" Padding="0,0,0,0" >借阅归还时间</Label>
+                        <Label FontSize="25" Margin="120,20,0,0" Foreground="White" Padding="0,0,0,0" >状态</Label>
+                    </StackPanel>
+                </Border>
+                <Border  Visibility="{Binding PICState}" CornerRadius="0,0,10,10"  Height="556" Margin="90,300,60,0" VerticalAlignment="Top" Width="1100">
+                    <Image Source="..\ControlImages\未连接.png" Width="514" Height="316"/>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseDown">
+                            <i:InvokeCommandAction
+                        Command="{Binding PICClickComand, Mode=OneWay}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Border>
+                <Border  CornerRadius="0,0,10,10" Height="556" Margin="92,300" Width="1100" Visibility="{Binding PICSJState}" Panel.ZIndex="3">
+                    <Image Source="..\ControlImages\无数据.jpg"  Width="514" Height="316" />
+                </Border>
+                <Border CornerRadius="0,0,10,10"  Name="BGRID" Visibility="{Binding GRIDstate}"  Height="556" VerticalAlignment="Top" Width="1100" Canvas.Left="90" Canvas.Top="300" >
+                    <DataGrid Visibility="Visible" TabIndex="2" GridLinesVisibility="None" BorderThickness="0" Background="White" Name="GRID" AutoGenerateColumns="False" FontSize="18" Tag="1"  ScrollViewer.VerticalScrollBarVisibility="Hidden"  ItemsSource="{Binding Me}" RowHeaderWidth="0" ColumnHeaderHeight="0" ColumnWidth="*" ScrollViewer.HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False" ScrollViewer.CanContentScroll="False">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding ClikCommand, Mode=OneWay}"
+                        CommandParameter="{Binding ElementName=control}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Height" Value="62"/>
+                                <Setter Property="BorderBrush" Value="Gray"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="BorderBrush" Value="Gray"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                                <Setter Property="Height" Value="0"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Width="1*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Border CornerRadius="50" Width="22" Height="22" BorderBrush="White" BorderThickness="0" >
+
+                                            <Image  Source="{Binding source}" Tag="{Binding Id}" Stretch="Fill">
+                                                <i:Interaction.Triggers>
+                                                    <i:EventTrigger EventName="MouseDown">
+                                                        <i:InvokeCommandAction Command="{Binding ClikCommand, Mode=OneWay}"
+                        CommandParameter="{Binding ElementName=control}"/>
+                                                    </i:EventTrigger>
+                                                </i:Interaction.Triggers>
+                                            </Image>
+
+                                        </Border>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="0.8*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label Content="{Binding num}" FontSize="21" Foreground="#5169a7" Tag="{Binding SurplusRenewableTimes}" Padding="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="2.2*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label Content="{Binding ArchivesName}" FontSize="21" Foreground="#5169a7" Padding="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="1.8*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+
+                                        <Label Content="{Binding BSTime}" FontSize="21" Foreground="#5169a7" Padding="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="1.8*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label Content="{Binding EDTime}" FontSize="21" Foreground="#5169a7" Padding="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <!--<DataGridTemplateColumn Width="1*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Canvas>
+                                            <Border Visibility="{Binding XJState}" Width="98" Height="30" CornerRadius="15" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave" Background="#2D89F4" Margin="32,16,41,16">
+                                                <Button Content="续借"   FontSize="16" Visibility="{Binding XJstate}" MouseEnter="Button_MouseEnter" BorderThickness="0" MouseLeave="Button_MouseLeave" Command="{Binding DataContext.XJCommond,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=UserControl}}" CommandParameter="{Binding ElementName=GRID}" Opacity="1"  Width="80" Height="28" Padding="0,0,0,0" Foreground="White" Background="#2D89F4" >
+                                                    <Button.Style>
+                                                        <Style TargetType="Button">
+                                                            <Style.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Content" Value="1" >
+
+                                                                    </Setter>
+                                                                    <Setter Property="Template">
+                                                                        <Setter.Value>
+                                                                            <ControlTemplate>
+                                                                                <Label  Padding="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center">续借</Label>
+                                                                            </ControlTemplate>
+                                                                        </Setter.Value>
+                                                                    </Setter>
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Button.Style>
+                                                </Button>
+                                            </Border>
+                                            <Border Visibility="{Binding FState}" Width="98" Height="30" CornerRadius="15" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave" Background="Red" Margin="32,16,41,16">
+                                                <Button Content="失败原因"   FontSize="16" MouseEnter="Button_MouseEnter" BorderThickness="0" MouseLeave="Button_MouseLeave" Command="{Binding DataContext.VSCommond,RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=UserControl}}" CommandParameter="{Binding ElementName=GRID}" Opacity="1"  Width="80" Height="28" Padding="0,0,0,0" Foreground="White" Background="Red" >
+                                                    <Button.Style>
+                                                        <Style TargetType="Button">
+                                                            <Style.Triggers>
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Content" Value="1" >
+
+                                                                    </Setter>
+                                                                    <Setter Property="Template">
+                                                                        <Setter.Value>
+                                                                            <ControlTemplate>
+                                                                                <Label  Padding="0" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center">失败原因</Label>
+                                                                            </ControlTemplate>
+                                                                        </Setter.Value>
+                                                                    </Setter>
+                                                                </Trigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Button.Style>
+                                                </Button>
+                                            </Border>
+                                            <Border Width="98" Visibility="{Binding SState}" Height="30" CornerRadius="15" MouseEnter="Border_MouseEnter" MouseLeave="Border_MouseLeave"  Margin="32,16,41,16">
+                                                <Label Content="续借成功"   FontSize="16" BorderThickness="0"  Opacity="1"  Width="80" Height="28" Padding="0" Foreground="#00FF7F" >
+                                                </Label>
+                                            </Border>
+                                        </Canvas>
+
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+                <Border CornerRadius="0,0,10,10" Panel.ZIndex="1" Visibility="{Binding ENDState}" Name="datagrid" Background="Red" BorderThickness="0" Height="556" Margin="90,300,60,0" VerticalAlignment="Top" Width="1100">
+                    <DataGrid  GridLinesVisibility="None"  BorderThickness="0" AutoGenerateColumns="False" FontSize="18" Background="White" TabIndex="5" ScrollViewer.VerticalScrollBarVisibility="Hidden"  ItemsSource="{Binding Remark}" RowHeaderWidth="0" ColumnHeaderHeight="0" ColumnWidth="*" ScrollViewer.HorizontalScrollBarVisibility="Hidden" CanUserAddRows="False" ScrollViewer.CanContentScroll="False">
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Height" Value="62"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="BorderBrush" Value="Gray"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Opacity" Value="0.8"/>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                                <Setter Property="Height" Value="0"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Width="0.8*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label VerticalContentAlignment="Center" FontSize="21" Foreground="#5169a7" HorizontalContentAlignment="Center" Content="{Binding num}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="2.2*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label VerticalContentAlignment="Center" FontSize="21" Foreground="#5169a7" HorizontalContentAlignment="Center" Content="{Binding ArchivesName}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="1.8*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label VerticalContentAlignment="Center" FontSize="21" Foreground="#5169a7" HorizontalContentAlignment="Center" Content="{Binding BSTime}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="1.8*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label VerticalContentAlignment="Center" FontSize="21" Foreground="#5169a7" HorizontalContentAlignment="Center" Content="{Binding EDTime}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Width="1.6*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Label VerticalContentAlignment="Center"  FontSize="21" HorizontalContentAlignment="Center" Content="{Binding errorMsg}" Foreground="{Binding color}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Border>
+                <Border Name="S" Width="80" Height="30" Margin="450,896,812,98" CornerRadius="15" Visibility="Hidden" Background="#2D89F4" >
+                    <Label   Width="60"  Content="首页" HorizontalContentAlignment="Center" MouseEnter="Button_Click_2" VerticalContentAlignment="Center" Height="28" BorderThickness="0" FontSize="16"   Padding="0,0,0,0"  Background="#2D89F4" Tag="1" Foreground="White" Margin="10,1,10,0" VerticalAlignment="Top" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <i:InvokeCommandAction
+                        Command="{Binding btnCommond, Mode=OneWay}"
+                        CommandParameter="{Binding ElementName=control}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+
+                    </Label>
+                </Border>
+                <Border Name="T" Visibility="Hidden" Width="80" Height="30" Margin="650,896,498,98" CornerRadius="15" Background="#00CCFF">
+                    <Label Content="上一页"  BorderThickness="0"  Width="60" Height="28" FontSize="16" MouseEnter="Button_Click_2" Background="#00CCFF" Tag="2"  Foreground="White" Margin="10,0,10,1.4" VerticalAlignment="Bottom">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <i:InvokeCommandAction
+                        Command="{Binding btnCommond, Mode=OneWay}"
+                        CommandParameter="{Binding ElementName=control}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Label>
+                </Border>
+                <Border Name="X" Visibility="Hidden" Width="80" Height="30" Margin="750,896,388,98" CornerRadius="15" Background="#00D5B4">
+                    <Label Content="下一页" Width="60" Height="28"  BorderThickness="0" FontSize="16" HorizontalAlignment="Center" MouseEnter="Button_Click_2"   Background="#00D5B4" Tag="3" Foreground="White">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseDown">
+                                <i:InvokeCommandAction
+                        Command="{Binding btnCommond, Mode=OneWay}"
+                        CommandParameter="{Binding ElementName=control}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Label>
+                </Border>
+                <Border Name="W" Width="180" Height="50" Margin="1007,888,388,98" CornerRadius="28" Background="#2D89F4">
+                    <Button Width="150" Height="48"   Style="{StaticResource EmptyButtonStyle}"   Command="{Binding OnekeyCommond}"
+                        CommandParameter="{Binding ElementName=control}"  FontSize="22" Background="#2D89F4" >
+                        <Button.Content>
+                            <Label FontSize="22" Foreground="White" Width="150" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">一键续借</Label>
+                        </Button.Content>
+                    </Button>
+                </Border>
+                <Border Visibility="{Binding Bstate}" Width="180" Height="50" Margin="1007,888,388,98" CornerRadius="28" Background="#2D89F4">
+                    <Button Width="150" Height="48"   Style="{StaticResource EmptyButtonStyle}"   Command="{Binding PrintCommond}"  CommandParameter="{Binding ElementName=control}" FontSize="22" Background="#2D89F4" >
+                        <Button.Content>
+                            <Label FontSize="22" Foreground="White" Width="150" Height="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">完成</Label>
+                        </Button.Content>
+                    </Button>
+                </Border>
+                <Border Visibility="Hidden" Name="A" Width="80" Height="30" Margin="592,896,500,98" CornerRadius="15" Background="#2D89F4">
+                    <Label  Content="跳转" BorderThickness="0" FontSize="16" Tag="0"  HorizontalAlignment="Center" Width="60" Height="28" HorizontalContentAlignment="Center"   Background="#2D89F4"  Foreground="White">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction
+                        Command="{Binding btnCommond, Mode=OneWay}"
+                        CommandParameter="{Binding ElementName=control}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Label>
+                </Border>
+                <Border Visibility="Hidden" Name="T1" Width="100" Height="30" Margin="540,896,610,98" CornerRadius="15" Background="White" Opacity="0.5">
+                    <TextBox MouseEnter="Txt_MouseEnter" TabIndex="5" Name="txt" FontSize="16" Text="1"  VerticalContentAlignment="Center"  VerticalAlignment="Center" HorizontalAlignment="Center" HorizontalContentAlignment="Center"  Width="90" Height="26" RenderTransformOrigin="0.989,-0.154" />
+                </Border>
+                <Border Visibility="Hidden" Name="T2" Width="100" Height="30" Margin="540,896,610,98" CornerRadius="15" Background="White" Opacity="0.5">
+                    <Label  Name="tet" FontSize="16"  HorizontalAlignment="Center" Content="{Binding InputPage}" HorizontalContentAlignment="Center"  VerticalAlignment="Center"  Width="90" Height="26" />
+                </Border>
+
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</UserControl>

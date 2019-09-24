@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="DoorProhibit.Controls.SetUpMain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DoorProhibit.Controls"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded">
+
+    <Grid Width="1280" Height="1024">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="110" />
+            <RowDefinition Height="90" />
+            <RowDefinition Height="824" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <WrapPanel Orientation="Horizontal"  VerticalAlignment="Center">
+                <Label Width="50"></Label>
+                <Button Background="#00ff" HorizontalAlignment="Left" Style="{StaticResource EmptyButtonStyle}" BorderThickness="0" Height="26" Width="13" Command="{Binding backCommond}">
+                    <Button.Content>
+                        <Image Source="../images/返回.png"   Stretch="Fill" />
+                    </Button.Content>
+                </Button>
+                <Button Background="#00ff" HorizontalAlignment="Left" Style="{StaticResource EmptyButtonStyle}" BorderThickness="0" Command="{Binding backCommond}">
+                    <Button.Content>
+                        <Label Content=" 返回" Foreground="White" FontSize="26" Padding="0" VerticalContentAlignment="Center"/>
+                    </Button.Content>
+                </Button>
+            </WrapPanel>
+            <WrapPanel Orientation="Horizontal"  HorizontalAlignment="Right" VerticalAlignment="Center" >
+                <Button Style="{StaticResource EmptyButtonStyle}" HorizontalAlignment="Right" Height="26" BorderThickness="0" Foreground="White" Command="{Binding signOutCommond}"   Visibility="Visible">
+                    <Button.Content>
+                        <Image Source="../images/退出程序.png"/>
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource EmptyButtonStyle}" HorizontalAlignment="Right" BorderThickness="0" Foreground="White" Command="{Binding signOutCommond}"   Visibility="Visible">
+                    <Button.Content>
+                        <Label Foreground="White" FontSize="26" VerticalContentAlignment="Center">退出</Label>
+                    </Button.Content>
+                </Button>
+                <Label Width="50" />
+            </WrapPanel>
+        </Grid>
+        <Border Background="#F6FCFF" Grid.Row="2" />
+        <Border CornerRadius="40" Background="White" Margin="38,50,42,2" BorderThickness="0" Width="1200" Grid.RowSpan="3" Height="860">
+            <Grid Name="canvas" Grid.Row="2" Width="1120" Background="White">
+
+            </Grid>
+        </Border>
+       
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#00BEF6" Offset="0"/>
+                <GradientStop Color="#0CE59B" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+</UserControl>

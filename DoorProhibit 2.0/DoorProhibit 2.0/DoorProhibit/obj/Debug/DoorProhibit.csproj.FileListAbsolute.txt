@@ -1,0 +1,229 @@
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csprojAssemblyReference.cache
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\MainWindow.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\App.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\MainWindow.baml
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Cmds.dll
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Com.dll
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Cmds.pdb
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Cmds.xml
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Com.pdb
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Com.xml
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Reader.dll
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csprojAssemblyReference.cache
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\MainWindow.g.cs
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\App.g.cs
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.exe
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.pdb
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\DoorProhibit.exe
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\DoorProhibit.pdb
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Reader.dll
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Cmds.dll
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Com.dll
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Cmds.pdb
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Cmds.xml
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Com.pdb
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\RFID_Reader_Com.xml
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\MainWindow.baml
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+G:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Microsoft.Practices.Prism.dll
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\Controls\MainControl.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\Aga.Controls.dll
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\OpenHardwareMonitorLib.dll
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\bin\Debug\OpenHardwareMonitorLib.pdb
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\Controls\MainControl.baml
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\Controls\SetUpMain.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\Controls\SetUpMain.baml
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\Controls\SetUp2.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit\DoorProhibit\obj\Debug\Controls\SetUp2.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\Aga.Controls.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\Microsoft.Practices.Prism.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\OpenHardwareMonitorLib.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\Reader.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\RFID_Reader_Cmds.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\RFID_Reader_Com.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\OpenHardwareMonitorLib.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\RFID_Reader_Cmds.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\RFID_Reader_Cmds.xml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\RFID_Reader_Com.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\bin\Debug\RFID_Reader_Com.xml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csprojAssemblyReference.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\App.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.pdb
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.pdb
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.g.cs
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.g.cs
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.g.cs
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.g.cs
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\App.g.cs
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.baml
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.baml
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.baml
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.baml
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.exe
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.pdb
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.pdb
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.g.cs
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.g.cs
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.g.cs
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.g.cs
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\App.g.cs
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.baml
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.baml
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.baml
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.baml
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.exe
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.g.cs
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.g.cs
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.g.cs
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.g.cs
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\App.g.cs
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.baml
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.baml
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.baml
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.baml
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.pdb
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.pdb
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.g.cs
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.g.cs
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.g.cs
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.g.cs
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\App.g.cs
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.baml
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.baml
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.baml
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.baml
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.exe
+J:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\新建文件夹\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csprojAssemblyReference.cache
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Reader.dll
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\bin\Debug\Reader.dll
+\\MRFAN\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csprojAssemblyReference.cache
+C:\Users\PC-凡\MrFan彭曾圣凡\共享文件\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csprojAssemblyReference.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe.config
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\bin\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.dll
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\bin\Debug\Newtonsoft.Json.xml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\App.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit_MarkupCompile.lref
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\MainControl.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUp2.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\SetUpMain.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\MainWindow.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.g.resources
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.Properties.Resources.resources
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.GenerateResource.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CoreCompileInputs.cache
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csproj.CopyComplete
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.exe
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.pdb
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\App.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\Loading.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\Loading.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\IsQuit.g.cs
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\Controls\IsQuit.baml
+D:\菱牛科技\创口通讯\DoorProhibit 2.0\DoorProhibit 2.0\DoorProhibit\obj\Debug\DoorProhibit.csprojAssemblyReference.cache

@@ -1,0 +1,17 @@
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\bin\x86\Debug\ArcFace.dll
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\bin\x86\Debug\ArcFace.pdb
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\x86\Debug\AsfFace.csproj.CoreCompileInputs.cache
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\x86\Debug\ArcFace.dll
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\x86\Debug\ArcFace.pdb
+G:\BaiduNetdiskDownload\ArcFace2.0\ArcFace2.0\ArcFace\obj\x86\Debug\AsfFace.csprojAssemblyReference.cache
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\bin\x86\Debug\x86\concrt140.dll
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\bin\x86\Debug\x86\cvextern.dll
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\bin\x86\Debug\x86\msvcp140.dll
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\bin\x86\Debug\x86\opencv_ffmpeg410.dll
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\bin\x86\Debug\x86\vcruntime140.dll
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\bin\x86\Debug\ArcFace.dll
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\bin\x86\Debug\ArcFace.pdb
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\obj\x86\Debug\AsfFace.csprojAssemblyReference.cache
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\obj\x86\Debug\AsfFace.csproj.CoreCompileInputs.cache
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\obj\x86\Debug\ArcFace.dll
+D:\菱牛科技\创口通讯\WpfApp2\ArcFace\obj\x86\Debug\ArcFace.pdb
