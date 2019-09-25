@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\菱牛科技\创口通讯\Rfid系统\Rfid系统\obj\Debug\
+D:\菱牛科技\Library\Rfid系统\Rfid系统\obj\Debug\
 Rfid系统
 none
 false
 DEBUG;TRACE
-D:\菱牛科技\创口通讯\Rfid系统\Rfid系统\App.xaml
+D:\菱牛科技\Library\Rfid系统\Rfid系统\App.xaml
 30225865221
 
-104-1195109773
-33-2113284069
+1082093195721
+33-1576062707
 MainWindow.xaml;View\BindingCorrectionControl.xaml;View\BingCorrectionMessageControl.xaml;View\BingHistoryControl.xaml;View\BIssueSubscriptionControl.xaml;View\CallNumberControl.xaml;View\ChangeControl.xaml;View\ChangeSuccessControl.xaml;View\DetailsControl.xaml;View\EditControl.xaml;View\ErrorPage.xaml;View\FrequencyChooseControl.xaml;View\HDHistroyControl.xaml;View\ISBNListControl.xaml;View\Load.xaml;View\LoginControl.xaml;View\MainControl.xaml;View\MarCodeAddControl.xaml;View\MarCodePrintControl.xaml;View\PeriodicalChangeControl.xaml;View\PeriodicalChooseControl.xaml;View\PeriodicalControl.xaml;View\PeriodicalHistoryControl.xaml;View\PersonalCenterControl.xaml;View\PNChooseControl.xaml;View\PrintSetControl.xaml;View\QueryControl.xaml;View\RFIDBindingControl.xaml;View\SetControl.xaml;View\Window1.xaml;
 
-False
+True
 

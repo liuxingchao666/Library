@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Rfid系统.BLL
 {
@@ -211,6 +212,54 @@ namespace Rfid系统.BLL
                 result = ex.Message;
             }
             return result;
+        }
+        public string HttpUp(string filePath, string fileName)
+        {
+            string ip = "";
+            string port = "";
+            if (!File.Exists(filePath))
+                return "文件路径格式有误";
+            byte[] bytes;
+            using (FileStream fileStream = new FileStream(filePath, FileMode.Open))
+            {
+                bytes = new byte[(int)fileStream.Length];
+                fileStream.Read(bytes, 0, bytes.Length);
+            }
+            WebClient webClient = new WebClient();
+            webClient.Credentials = CredentialCache.DefaultCredentials;
+            webClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+            webClient.QueryString["fileName"] = fileName;
+            byte[] fileb = webClient.UploadData(new Uri(@"http://" + ip + ":" + port + "/" + fileName + ""), "POST", bytes);
+            return Encoding.UTF8.GetString(fileb);
+        }
+        /// <summary>
+        /// 下载文件
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public string HttpDown(string url)
+        {
+            string path = getPath();
+            WebClient webClient = new WebClient();
+            if (File.Exists(path + "/" + url.Split('/')[3]))
+                File.Delete(path + "/" + url.Split('/')[3]);
+            webClient.Headers.Add("Content-Type", "application/x-www-form-urlencoded");
+            webClient.DownloadFile(new Uri(url), path + "/" + url.Split('/')[3]);
+            //或者
+            webClient.DownloadFileCompleted += (s, es) =>
+            {
+                MessageBox.Show("下载成功!");
+            };
+            webClient.DownloadFileAsync(new Uri(url), path);
+            return "下载成功";
+        }
+        [STAThread]
+        static string getPath()
+        {
+            FolderBrowserDialog saveFileDialog = new FolderBrowserDialog();
+            saveFileDialog.Description = "请选择您的文件保存路径";
+            saveFileDialog.ShowDialog();
+            return saveFileDialog.SelectedPath;
         }
     }
 }
